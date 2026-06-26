@@ -16,7 +16,8 @@
   --shadow:0 4px 16px rgba(0,0,0,.08); --shadow-lg:0 12px 32px rgba(0,0,0,.12);
 }
 html { scroll-behavior:smooth; }
-body { font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; color:var(--gray-900); background:#fff; line-height:1.6; -webkit-font-smoothing:antialiased; }
+body { font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; color:var(--gray-900); background:#fff; line-height:1.6; -webkit-font-smoothing:antialiased; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html { background:#fff; }
 a { color:inherit; text-decoration:none; }
 img { display:block; max-width:100%; height:auto; }
 
@@ -41,8 +42,8 @@ img { display:block; max-width:100%; height:auto; }
 .hero p { font-size:17px; max-width:680px; opacity:.92; }
 
 /* Section */
-.section { padding:64px 32px; }
-.section.alt { background:var(--gray-50); }
+.section { padding:64px 32px; background:#fff; }
+/* .section.alt 灰底已废弃 — 留 class 在 HTML 不影响（CSS 已无规则）。整份报告全白底节奏靠卡片 border + shadow 区分。 */
 .section-inner { max-width:1280px; margin:0 auto; }
 .section-head { margin-bottom:36px; }
 .section-head h2 { font-size:30px; font-weight:800; color:var(--gray-900); letter-spacing:-.5px; margin-bottom:10px; }
@@ -136,7 +137,8 @@ img { display:block; max-width:100%; height:auto; }
 }
 
 /* ===== Print / PDF — force desktop layout + page-break control ===== */
-@media print {
+/* Desktop-print overrides only. Mobile-print (viewport < 1025) falls through to mobile responsive (single column). */
+@media print and (min-width: 1025px) {
   @page { size:letter; margin:0; }
   body { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
   .header { position:static; box-shadow:none; }
@@ -398,16 +400,28 @@ or deleted as needed. Comments mark each section.
 <script>
   // Single-page PDF mode: measure last-content bottom and inject @page size so the printed PDF
   // is ONE giant page sized exactly to the content (no pagination, no trailing whitespace).
-  // CRITICAL: Chrome must be launched with --window-size=1280,800 so the DOM-measurement viewport
-  // matches the @page width — otherwise measured height is wrong (content reflows differently
-  // under the default 800px viewport vs printed 1280px viewport).
+  //
+  // DEFAULTS TO MOBILE (414px wide) — best for sharing via WeChat / email, viewed on phones/tablets.
+  // For a desktop-width PDF: change `w` to 1280 here AND change Chrome cmd to --window-size=1280,800.
+  //
+  // CRITICAL: Chrome must be launched with --window-size matching `w` here (e.g. 414,800 for mobile).
+  // Otherwise measured height is wrong (DOM measurement viewport ≠ @page width → reflow differs).
+  //
+  // BUFFER (+200px): print-time reflow can add ~50-150px vs JS measurement (font fallback / image
+  // late-layout). +200 buffer keeps content on one page; cost is a small white strip at the bottom.
   window.addEventListener('load', () => {
     requestAnimationFrame(() => {
+      document.documentElement.style.margin = '0';
+      document.body.style.margin = '0';
       const last = document.querySelector('footer.footer')
                 || [...document.querySelectorAll('section, footer')].pop()
                 || document.body;
-      const h = Math.ceil(last.getBoundingClientRect().bottom + window.scrollY);
-      const w = 1280;
+      const h = Math.max(
+        Math.ceil(last.getBoundingClientRect().bottom + window.scrollY),
+        document.documentElement.scrollHeight,
+        document.body.scrollHeight
+      ) + 200;
+      const w = 414;  // mobile width (change to 1280 for desktop PDF)
       const s = document.createElement('style');
       s.textContent = `@page { size: ${w}px ${h}px; margin: 0; } html, body { margin: 0 !important; }`;
       document.head.appendChild(s);
