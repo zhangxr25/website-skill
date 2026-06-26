@@ -138,24 +138,27 @@ img{ display:block; max-width:100%; }
 .tbl td.pick{ font-weight:600; color:var(--primary); }
 
 /* ============ PRODUCT CARDS — strong card treatment (accent edge + tinted spec panel = card-in-card) ============ */
-.pcards{ display:flex; flex-direction:column; gap:13px; }
-.pcard{ display:grid; grid-template-columns:168px 1fr; border:1px solid var(--gray-300); border-left:4px solid var(--primary); border-radius:13px; overflow:hidden; background:#fff; }
-.pcard .im{ position:relative; background:var(--gray-100); border-right:1px solid var(--gray-200); }
+.pcards{ display:flex; flex-direction:column; gap:16px; }
+.pcard{ display:grid; grid-template-columns:230px 1fr; border:1px solid var(--gray-200); border-radius:10px; overflow:hidden; background:#fff; }
+.pcard .im{ position:relative; background:var(--gray-100); }
 .pcard .im img{ width:100%; height:100%; object-fit:cover; }
-.pcard .rank{ position:absolute; top:11px; left:11px; background:var(--accent); color:#fff; font-size:15px; font-weight:900; padding:6px 13px; border-radius:7px; letter-spacing:.3px; }
-.pcard .pb{ padding:12px 18px; display:flex; flex-direction:column; }
-.pcard .ph{ display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:6px; }
-.pcard .pt{ font-size:14px; font-weight:800; color:var(--gray-900); line-height:1.3; }
-.pcard .mk{ font-size:8.5px; font-weight:800; letter-spacing:.8px; text-transform:uppercase; color:#fff; background:var(--primary); padding:4px 10px; border-radius:20px; white-space:nowrap; align-self:flex-start; }
-.pcard .brand{ font-size:11px; font-weight:800; letter-spacing:.8px; text-transform:uppercase; color:var(--accent); margin-bottom:9px; }
-.specs{ display:grid; grid-template-columns:repeat(4,1fr); gap:9px 12px; padding:10px 13px; background:var(--gray-50); border:1px solid var(--gray-200); border-radius:9px; }
-.sp .l{ font-size:9px; letter-spacing:.8px; text-transform:uppercase; color:var(--gray-500); font-weight:700; margin-bottom:2px; }
-.sp .v{ font-size:12.5px; font-weight:700; color:var(--gray-900); }
+.pcard .rank{ position:absolute; top:14px; left:14px; background:var(--accent); color:#fff; font-size:14px; font-weight:800; padding:7px 14px; border-radius:5px; letter-spacing:.3px; }
+.pcard .pb{ padding:15px 22px; display:flex; flex-direction:column; }
+.pcard .pt{ font-size:15.5px; font-weight:800; color:var(--gray-900); line-height:1.3; margin-bottom:8px; }
+.pcard .brow{ display:flex; align-items:baseline; gap:12px; padding-bottom:11px; border-bottom:1px solid var(--gray-200); margin-bottom:12px; }
+.pcard .brand{ font-size:13px; font-weight:800; letter-spacing:.5px; text-transform:uppercase; color:var(--accent); }
+.pcard .mk{ font-size:11px; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--gray-500); }
+.specs{ display:grid; grid-template-columns:repeat(4,1fr); gap:11px 16px; margin-bottom:11px; }
+.sp .l{ font-size:9.5px; letter-spacing:1px; text-transform:uppercase; color:var(--gray-500); font-weight:700; margin-bottom:3px; }
+.sp .v{ font-size:13px; font-weight:700; color:var(--gray-900); }
 .sp .v.price{ color:var(--accent); }
 .sp .v.heat{ color:var(--primary); }
-.sp .v.mono{ font-family:Consolas,monospace; font-size:11px; }
-.pcard .nt{ font-size:11px; color:var(--gray-700); line-height:1.4; margin-top:9px; }
-.pcard .src{ font-size:9.5px; font-style:italic; color:var(--gray-400); margin-top:6px; }
+.sp .v.mono{ font-family:Consolas,monospace; font-size:11.5px; }
+.pcard .nt{ font-size:11.5px; color:var(--gray-700); line-height:1.45; background:var(--gray-50); border-left:3px solid var(--primary); padding:9px 13px; border-radius:3px; margin-bottom:8px; }
+.pcard .src{ font-size:10.5px; color:var(--gray-500); font-style:italic; margin-bottom:10px; }
+.pcard .links{ margin-top:auto; display:flex; gap:10px; flex-wrap:wrap; }
+.pcard .lbtn{ font-size:11.5px; font-weight:700; color:#fff; background:var(--primary); padding:7px 15px; border-radius:4px; }
+.pcard .lbtn.ca{ background:#6c757d; }
 
 /* ============ PATTERN MINI BOXES (3-up) ============ */
 .pat{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:2px; }
@@ -365,13 +368,13 @@ HOW TO USE
     <h1 class="ptitle">{{PAGE_TITLE}}</h1>
     <div class="rule"></div>
 
-    <!-- BLOCK: product card. Repeat 2-3 per page (more than 3 will overflow — split to another page). -->
+    <!-- BLOCK: product card. 卡片较高 → 每页放 2 张（3 张会溢出，拆到新页）。 -->
     <div class="pcards">
       <article class="pcard">
         <div class="im"><span class="rank">#{{RANK}}</span><img src="images/products/{{P_IMG}}" alt="{{P_ALT}}"/></div>
         <div class="pb">
-          <div class="ph"><div class="pt">{{P_TITLE}}</div><div class="mk">{{P_MARKET}}</div></div>
-          <div class="brand">{{P_BRAND}}</div>
+          <div class="pt">{{P_TITLE}}</div>
+          <div class="brow"><span class="brand">{{P_BRAND}}</span><span class="mk">{{P_MARKET}}</span></div>
           <div class="specs">
             <div class="sp"><div class="l">{{SPEC_1_L}}</div><div class="v price">{{SPEC_1_V}}</div></div>
             <div class="sp"><div class="l">{{SPEC_2_L}}</div><div class="v heat">{{SPEC_2_V}}</div></div>
@@ -384,18 +387,20 @@ HOW TO USE
           </div>
           <div class="nt">{{P_NOTE}}</div>
           <div class="src">{{P_SOURCE}}</div>
+          <!-- link buttons: 2nd <a> 可选（单市场就删掉它）。href 用 ASIN 拼：amazon.com/dp/<ASIN>、amazon.ca/dp/<ASIN> -->
+          <div class="links"><a class="lbtn" href="{{LINK_1_URL}}" target="_blank">{{LINK_1_LABEL}} ›</a><a class="lbtn ca" href="{{LINK_2_URL}}" target="_blank">{{LINK_2_LABEL}} ›</a></div>
         </div>
       </article>
-      <!-- duplicate the <article> above for each additional product -->
+      <!-- duplicate the <article> above for the 2nd product (2 per page max — cards are tall) -->
     </div>
   </div>
   <div class="foot"><span>{{FOOT_LABEL}}</span><span class="pg">{{PAGE_NO}}</span></div>
 </section>
 
 <!-- ============================ PAGE — PRODUCT CARDS + PRICE BAND + PATTERN + BANNER ============================ -->
-<!-- 默认 = 2 张卡 + 3 洞察盒 + 横幅（松而不空，已验证）。价格带图默认注释掉（加上会挤）。
-     若是 3 张卡 / 内容更多 → 拆两页（卡一页；洞察盒+横幅一页，洞察盒用 flex 居中填空）。别硬压。
-     改完务必读这页 PDF：横幅最后一行没被裁、底部不溢出。 -->
+<!-- 默认 = 1 张卡（高卡）+ 3 洞察盒 + 横幅（松而不空，已验证）。价格带图默认注释掉（加上会挤）。
+     产品卡较高，一页只放得下 2 张；这页是「最后 1 张卡 + 市场规律小结」，所以放 1 张卡 + 洞察盒。
+     若内容更多 → 拆两页。改完务必读这页 PDF：横幅最后一行没被裁、底部不溢出。 -->
 <section class="page">
   <div class="body">
     <div class="eyebrow"><div class="tag">{{SECTION_TAG}}</div><div class="note">{{SECTION_NOTE}}</div></div>
@@ -406,8 +411,8 @@ HOW TO USE
       <article class="pcard">
         <div class="im"><span class="rank">#{{RANK}}</span><img src="images/products/{{P_IMG}}" alt="{{P_ALT}}"/></div>
         <div class="pb">
-          <div class="ph"><div class="pt">{{P_TITLE}}</div><div class="mk">{{P_MARKET}}</div></div>
-          <div class="brand">{{P_BRAND}}</div>
+          <div class="pt">{{P_TITLE}}</div>
+          <div class="brow"><span class="brand">{{P_BRAND}}</span><span class="mk">{{P_MARKET}}</span></div>
           <div class="specs">
             <div class="sp"><div class="l">{{SPEC_1_L}}</div><div class="v price">{{SPEC_1_V}}</div></div>
             <div class="sp"><div class="l">{{SPEC_2_L}}</div><div class="v">{{SPEC_2_V}}</div></div>
@@ -420,6 +425,8 @@ HOW TO USE
           </div>
           <div class="nt">{{P_NOTE}}</div>
           <div class="src">{{P_SOURCE}}</div>
+          <!-- link buttons: 2nd <a> 可选（单市场就删掉它）。href 用 ASIN 拼：amazon.com/dp/<ASIN>、amazon.ca/dp/<ASIN> -->
+          <div class="links"><a class="lbtn" href="{{LINK_1_URL}}" target="_blank">{{LINK_1_LABEL}} ›</a><a class="lbtn ca" href="{{LINK_2_URL}}" target="_blank">{{LINK_2_LABEL}} ›</a></div>
         </div>
       </article>
       <!-- duplicate the <article> above for the 2nd product (max 2 on this combined page) -->
@@ -443,7 +450,8 @@ HOW TO USE
     </div>
     -->
 
-    <!-- BLOCK: 3-up pattern mini boxes (orange-top accent, matches the stat-card look) -->
+    <!-- BLOCK: 3-up pattern mini boxes (orange-top accent, matches the stat-card look).
+         轻内容页：内容紧凑顶部对齐，横幅用固定 margin-top（不吸底），多余留白落在页底——比硬撑或居中更干净。 -->
     <div class="subhead">{{PATTERN_SUBHEAD}}</div>
     <div class="pat">
       <div class="b"><h4>{{PAT_1_H}}</h4><p>{{PAT_1_P}}</p></div>
@@ -451,7 +459,7 @@ HOW TO USE
       <div class="b"><h4>{{PAT_3_H}}</h4><p>{{PAT_3_P}}</p></div>
     </div>
 
-    <div class="banner"><h3><span class="ic">→</span>{{BANNER_TITLE}}</h3><p>{{BANNER_BODY}}</p></div>
+    <div class="banner" style="margin-top:28px;"><h3><span class="ic">→</span>{{BANNER_TITLE}}</h3><p>{{BANNER_BODY}}</p></div>
   </div>
   <div class="foot"><span>{{FOOT_LABEL}}</span><span class="pg">{{PAGE_NO}}</span></div>
 </section>

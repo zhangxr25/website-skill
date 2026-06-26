@@ -127,25 +127,28 @@ img{ display:block; max-width:100%; }
 .tbl td.area{ font-weight:800; color:var(--gray-900); white-space:nowrap; }
 .tbl td.pick{ font-weight:600; color:var(--primary); }
 
-/* product cards — strong card treatment (accent edge + tinted spec panel = card-in-card) */
-.pcards{ display:flex; flex-direction:column; gap:13px; }
-.pcard{ display:grid; grid-template-columns:168px 1fr; border:1px solid var(--gray-300); border-left:4px solid var(--primary); border-radius:13px; overflow:hidden; background:#fff; }
-.pcard .im{ position:relative; background:var(--gray-100); border-right:1px solid var(--gray-200); }
+/* product cards — clean white card: big image · brand row + divider · open specs · blue-accent note · evidence · link buttons (2 per page) */
+.pcards{ display:flex; flex-direction:column; gap:16px; }
+.pcard{ display:grid; grid-template-columns:230px 1fr; border:1px solid var(--gray-200); border-radius:10px; overflow:hidden; background:#fff; }
+.pcard .im{ position:relative; background:var(--gray-100); }
 .pcard .im img{ width:100%; height:100%; object-fit:cover; }
-.pcard .rank{ position:absolute; top:11px; left:11px; background:var(--accent); color:#fff; font-size:15px; font-weight:900; padding:6px 13px; border-radius:7px; letter-spacing:.3px; }
-.pcard .pb{ padding:12px 18px; display:flex; flex-direction:column; }
-.pcard .ph{ display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:6px; }
-.pcard .pt{ font-size:14px; font-weight:800; color:var(--gray-900); line-height:1.3; }
-.pcard .mk{ font-size:8.5px; font-weight:800; letter-spacing:.8px; text-transform:uppercase; color:#fff; background:var(--primary); padding:4px 10px; border-radius:20px; white-space:nowrap; align-self:flex-start; }
-.pcard .brand{ font-size:11px; font-weight:800; letter-spacing:.8px; text-transform:uppercase; color:var(--accent); margin-bottom:9px; }
-.specs{ display:grid; grid-template-columns:repeat(4,1fr); gap:9px 12px; padding:10px 13px; background:var(--gray-50); border:1px solid var(--gray-200); border-radius:9px; }
-.sp .l{ font-size:9px; letter-spacing:.8px; text-transform:uppercase; color:var(--gray-500); font-weight:700; margin-bottom:2px; }
-.sp .v{ font-size:12.5px; font-weight:700; color:var(--gray-900); }
+.pcard .rank{ position:absolute; top:14px; left:14px; background:var(--accent); color:#fff; font-size:14px; font-weight:800; padding:7px 14px; border-radius:5px; letter-spacing:.3px; }
+.pcard .pb{ padding:15px 22px; display:flex; flex-direction:column; }
+.pcard .pt{ font-size:15.5px; font-weight:800; color:var(--gray-900); line-height:1.3; margin-bottom:8px; }
+.pcard .brow{ display:flex; align-items:baseline; gap:12px; padding-bottom:11px; border-bottom:1px solid var(--gray-200); margin-bottom:12px; }
+.pcard .brand{ font-size:13px; font-weight:800; letter-spacing:.5px; text-transform:uppercase; color:var(--accent); }
+.pcard .mk{ font-size:11px; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--gray-500); }
+.specs{ display:grid; grid-template-columns:repeat(4,1fr); gap:11px 16px; margin-bottom:11px; }
+.sp .l{ font-size:9.5px; letter-spacing:1px; text-transform:uppercase; color:var(--gray-500); font-weight:700; margin-bottom:3px; }
+.sp .v{ font-size:13px; font-weight:700; color:var(--gray-900); }
 .sp .v.price{ color:var(--accent); }
 .sp .v.heat{ color:var(--primary); }
-.sp .v.mono{ font-family:Consolas,monospace; font-size:11px; }
-.pcard .nt{ font-size:11px; color:var(--gray-700); line-height:1.4; margin-top:9px; }
-.pcard .src{ font-size:9.5px; font-style:italic; color:var(--gray-400); margin-top:6px; }
+.sp .v.mono{ font-family:Consolas,monospace; font-size:11.5px; }
+.pcard .nt{ font-size:11.5px; color:var(--gray-700); line-height:1.45; background:var(--gray-50); border-left:3px solid var(--primary); padding:9px 13px; border-radius:3px; margin-bottom:8px; }
+.pcard .src{ font-size:10.5px; color:var(--gray-500); font-style:italic; margin-bottom:10px; }
+.pcard .links{ margin-top:auto; display:flex; gap:10px; flex-wrap:wrap; }
+.pcard .lbtn{ font-size:11.5px; font-weight:700; color:#fff; background:var(--primary); padding:7px 15px; border-radius:4px; }
+.pcard .lbtn.ca{ background:#6c757d; }
 
 /* pattern mini boxes (3) */
 .pat{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:2px; }
@@ -365,7 +368,7 @@ img{ display:block; max-width:100%; }
   <div class="foot"><span>Product Anatomy</span><span class="pg">04</span></div>
 </section>
 
-<!-- ============================ PAGE 5 — TOP CARDS (US) ============================ -->
+<!-- ============================ PAGE 5 — TOP CARDS #1–2 (US) ============================ -->
 <section class="page">
   <div class="body">
     <div class="eyebrow">
@@ -379,8 +382,8 @@ img{ display:block; max-width:100%; }
       <article class="pcard">
         <div class="im"><span class="rank">#1</span><img src="images/products/rank_1_B0DGTBH3XF.jpg" alt="NeatiEase"/></div>
         <div class="pb">
-          <div class="ph"><div class="pt">NeatiEase Wood Panels for Wall, 4-Piece 96 in x 12.6 in Soundproof Wood Slat Wall Panel</div><div class="mk">Market: US</div></div>
-          <div class="brand">NeatiEase</div>
+          <div class="pt">NeatiEase Wood Panels for Wall, 4-Piece 96 in x 12.6 in Soundproof Wood Slat Wall Panel</div>
+          <div class="brow"><span class="brand">NeatiEase</span><span class="mk">US</span></div>
           <div class="specs">
             <div class="sp"><div class="l">Price</div><div class="v price">$179.99</div></div>
             <div class="sp"><div class="l">Demand</div><div class="v heat">400+/mo</div></div>
@@ -393,14 +396,15 @@ img{ display:block; max-width:100%; }
           </div>
           <div class="nt">Best current US proof point: visible 400+ bought-in-past-month, strong category rank, and customer language focused on appearance, installation, value, and acoustics.</div>
           <div class="src">Source: Amazon live page check, June 26, 2026.</div>
+          <div class="links"><a class="lbtn" href="https://www.amazon.com/dp/B0DGTBH3XF" target="_blank">Amazon US ›</a></div>
         </div>
       </article>
 
       <article class="pcard">
         <div class="im"><span class="rank">#2</span><img src="images/products/rank_2_B0FN79B7QF.jpg" alt="TONOR"/></div>
         <div class="pb">
-          <div class="ph"><div class="pt">TONOR Wood Slatwall Panels, 2-Pack / 4-Pack Family, 47.2 in x 23.6 in Acoustic Wall Panels</div><div class="mk">Markets: US + CA</div></div>
-          <div class="brand">TONOR</div>
+          <div class="pt">TONOR Wood Slatwall Panels, 2-Pack / 4-Pack Family, 47.2 in x 23.6 in Acoustic Wall Panels</div>
+          <div class="brow"><span class="brand">TONOR</span><span class="mk">US + CA</span></div>
           <div class="specs">
             <div class="sp"><div class="l">Price</div><div class="v price">$52-$110</div></div>
             <div class="sp"><div class="l">Demand</div><div class="v heat">200+ to 1K+</div></div>
@@ -413,14 +417,30 @@ img{ display:block; max-width:100%; }
           </div>
           <div class="nt">TONOR shows the family effect: multiple color and pack-size variants appear in Amazon results with strong bought signals and broad decor/acoustic copy.</div>
           <div class="src">Source: Amazon search/result page checks and prior Chrome validation.</div>
+          <div class="links"><a class="lbtn" href="https://www.amazon.com/dp/B0FN79B7QF" target="_blank">Amazon US ›</a><a class="lbtn ca" href="https://www.amazon.ca/dp/B0FN79B7QF" target="_blank">Amazon CA ›</a></div>
         </div>
       </article>
+    </div>
+  </div>
+  <div class="foot"><span>Amazon Top Cards — US-Led Signals</span><span class="pg">05</span></div>
+</section>
 
+<!-- ============================ PAGE 6 — TOP CARDS #3–4 ============================ -->
+<section class="page">
+  <div class="body">
+    <div class="eyebrow">
+      <div class="tag">Amazon Top Cards</div>
+      <div class="note">Canada rows are weaker on visible monthly units, so BSR and review signals carry more weight.</div>
+    </div>
+    <h1 class="ptitle">Canada Reference Rows</h1>
+    <div class="rule"></div>
+
+    <div class="pcards">
       <article class="pcard">
         <div class="im"><span class="rank">#3</span><img src="images/products/rank_3_B0BWRMFSZ8.jpg" alt="Art3d"/></div>
         <div class="pb">
-          <div class="ph"><div class="pt">Art3d Wood Slat Acoustic Panels, Set of 4 3D Fluted Walnut Brown</div><div class="mk">Markets: US + CA</div></div>
-          <div class="brand">Art3d</div>
+          <div class="pt">Art3d Wood Slat Acoustic Panels, Set of 4 3D Fluted Walnut Brown</div>
+          <div class="brow"><span class="brand">Art3d</span><span class="mk">US + CA</span></div>
           <div class="specs">
             <div class="sp"><div class="l">Price</div><div class="v price">C$139.49</div></div>
             <div class="sp"><div class="l">Demand</div><div class="v heat">100/mo CA</div></div>
@@ -433,29 +453,15 @@ img{ display:block; max-width:100%; }
           </div>
           <div class="nt">High-review reference row showing the category's decor + noise-reduction message and a visible Canada sales signal from prior validation.</div>
           <div class="src">Source: Amazon Art3d page and prior Keepa/Chrome Canada validation.</div>
+          <div class="links"><a class="lbtn" href="https://www.amazon.com/dp/B0BWRMFSZ8" target="_blank">Amazon US ›</a><a class="lbtn ca" href="https://www.amazon.ca/dp/B0BWRMFSZ8" target="_blank">Amazon CA ›</a></div>
         </div>
       </article>
-    </div>
-  </div>
-  <div class="foot"><span>Amazon Top Cards — US-Led Signals</span><span class="pg">05</span></div>
-</section>
 
-<!-- ============================ PAGE 6 — TOP CARDS (CA) ============================ -->
-<section class="page">
-  <div class="body">
-    <div class="eyebrow">
-      <div class="tag">Amazon Top Cards</div>
-      <div class="note">Canada rows are weaker on visible monthly units, so BSR and review signals carry more weight.</div>
-    </div>
-    <h1 class="ptitle">Canada Reference Rows + Market Pattern</h1>
-    <div class="rule"></div>
-
-    <div class="pcards">
       <article class="pcard">
         <div class="im"><span class="rank">#4</span><img src="images/products/rank_4_B0CM6891WD.jpg" alt="RITOLLO"/></div>
         <div class="pb">
-          <div class="ph"><div class="pt">RITOLLO Wood Slat Panels for Wall, 2-Piece 94.5 in x 11 in Acoustic Panels</div><div class="mk">Market: CA</div></div>
-          <div class="brand">RITOLLO</div>
+          <div class="pt">RITOLLO Wood Slat Panels for Wall, 2-Piece 94.5 in x 11 in Acoustic Panels</div>
+          <div class="brow"><span class="brand">RITOLLO</span><span class="mk">CA</span></div>
           <div class="specs">
             <div class="sp"><div class="l">Price</div><div class="v price">C$101.99</div></div>
             <div class="sp"><div class="l">Demand</div><div class="v">Not exposed</div></div>
@@ -468,14 +474,30 @@ img{ display:block; max-width:100%; }
           </div>
           <div class="nt">Canada reference: validated as in-scope MDF/wood-slat acoustic construction. Monthly bought signal was not exposed.</div>
           <div class="src">Source: prior Keepa/Chrome Canada validation.</div>
+          <div class="links"><a class="lbtn ca" href="https://www.amazon.ca/dp/B0CM6891WD" target="_blank">Amazon CA ›</a></div>
         </div>
       </article>
+    </div>
+  </div>
+  <div class="foot"><span>Amazon Top Cards — Canada Reference</span><span class="pg">06</span></div>
+</section>
 
+<!-- ============================ PAGE 7 — TOP CARD #5 + MARKET PATTERN ============================ -->
+<section class="page">
+  <div class="body">
+    <div class="eyebrow">
+      <div class="tag">Amazon Top Cards</div>
+      <div class="note">How the US / Canada pattern should shape an importer's assortment.</div>
+    </div>
+    <h1 class="ptitle">Canada Reference + Market Pattern</h1>
+    <div class="rule"></div>
+
+    <div class="pcards">
       <article class="pcard">
         <div class="im"><span class="rank">#5</span><img src="images/products/rank_5_B0DM1M2B8H.jpg" alt="VEVOR"/></div>
         <div class="pb">
-          <div class="ph"><div class="pt">VEVOR Wood Slat Acoustic Panels, 7.9 in x 94.5 in MDF Accent Wooden Wall Panels</div><div class="mk">Market: CA</div></div>
-          <div class="brand">VEVOR</div>
+          <div class="pt">VEVOR Wood Slat Acoustic Panels, 7.9 in x 94.5 in MDF Accent Wooden Wall Panels</div>
+          <div class="brow"><span class="brand">VEVOR</span><span class="mk">CA</span></div>
           <div class="specs">
             <div class="sp"><div class="l">Price</div><div class="v price">C$361.89</div></div>
             <div class="sp"><div class="l">Demand</div><div class="v">Not exposed</div></div>
@@ -488,6 +510,7 @@ img{ display:block; max-width:100%; }
           </div>
           <div class="nt">Higher-ticket Canada reference row; useful for price-band awareness and MDF material positioning.</div>
           <div class="src">Source: prior Keepa/Chrome Canada validation and VEVOR product page context.</div>
+          <div class="links"><a class="lbtn ca" href="https://www.amazon.ca/dp/B0DM1M2B8H" target="_blank">Amazon CA ›</a></div>
         </div>
       </article>
     </div>
@@ -499,12 +522,12 @@ img{ display:block; max-width:100%; }
       <div class="b"><h4>Price band is broad</h4><p>Small packs can appear near $50-$110, while large-format or Canada rows may sit around C$100-C$360.</p></div>
     </div>
 
-    <div class="banner">
+    <div class="banner" style="margin-top:28px;">
       <h3><span class="ic">→</span>For a buyer presentation, show the product family logic, not only the top ASIN.</h3>
       <p>Importers need to know which finishes, pack sizes, coverage claims, and scene images can become an assortment, not just which listing ranks today.</p>
     </div>
   </div>
-  <div class="foot"><span>Amazon Top Cards — Canada and Pattern</span><span class="pg">06</span></div>
+  <div class="foot"><span>Amazon Top Cards — Canada and Pattern</span><span class="pg">07</span></div>
 </section>
 
 <!-- ============================ PAGE 7 — IMPORTER TAKEAWAY ============================ -->
@@ -537,7 +560,7 @@ img{ display:block; max-width:100%; }
       <p>Importers already active in wall panels, trim, DIY decor, home improvement, or building-material retail who want a higher-ticket, design-led category for seasonal market updates.</p>
     </div>
   </div>
-  <div class="foot"><span>Importer Takeaway</span><span class="pg">07</span></div>
+  <div class="foot"><span>Importer Takeaway</span><span class="pg">08</span></div>
 </section>
 
 <!-- ============================ PAGE 8 — METHODOLOGY ============================ -->
@@ -586,7 +609,7 @@ img{ display:block; max-width:100%; }
       <strong>Disclaimer.</strong> This report is market-product research for merchandising and sourcing discussion. It is not legal, financial, engineering, or acoustic-performance advice. Amazon ranks, ratings, prices, bought signals, and availability should be rechecked before customer presentation or purchasing decisions. Brand names and ASINs are references for benchmarking only; INTCO Decor is not affiliated with Amazon or the listed brands.
     </div>
   </div>
-  <div class="foot"><span>Methodology &amp; Disclaimer</span><span class="pg">08</span></div>
+  <div class="foot"><span>Methodology &amp; Disclaimer</span><span class="pg">09</span></div>
 </section>
 
 </body></html>

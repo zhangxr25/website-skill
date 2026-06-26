@@ -20,7 +20,7 @@ metadata:
 > 1. 📐 [`references/template-guide.md`](references/template-guide.md) — **母版使用指南**：8 种页型怎么挑、怎么组装、每个 `{{占位符}}` 填什么、填写铁律。
 > 2. 🧭 [`references/layout-pitfalls.md`](references/layout-pitfalls.md) — **排版避坑手册**：真实踩过的 7 个坑 + 解法 + 逐页验证清单。
 >
-> 完整成品对照：[`examples/mdf-acoustic-brochure/`](examples/mdf-acoustic-brochure/)（8 页，含图与 PDF）。
+> 完整成品对照：[`examples/mdf-acoustic-brochure/`](examples/mdf-acoustic-brochure/)（9 页，含图与 PDF）。
 
 ## 0. 使命与边界（最重要，先读）
 
@@ -53,7 +53,7 @@ metadata:
 
 | Token | 值 | 用途 |
 |---|---|---|
-| `--primary` | `#1a3d6e` | 大标题、页码、stat 数字、品牌、产品卡左侧色条/市场药丸 |
+| `--primary` | `#1a3d6e` | 大标题、页码、stat 数字、品牌、note 蓝竖条、链接按钮 |
 | `--primary-dk` | `#0f2647` | 封面遮罩、深色 banner、footer |
 | `--accent` | `#e85a2e` | eyebrow 栏目标签、rule、价格、rank 徽章、强调 |
 | 字体 | Google Fonts `Inter` 400–900 | 全站统一 |
@@ -84,7 +84,7 @@ metadata:
 6. **path / step rows** — 标签 → 文字的递进行
 7. **swatches** — 5 个颜色色卡（饰面/配色用）
 8. **checklist table** — 三列表格
-9. **product cards** — 左图右 8 格规格的产品卡（每页放 2–3 张，多了会溢出）
+9. **product cards** — 大图左 + 标题/品牌·市场 + 开放 4×2 规格 + 蓝条说明 + Evidence + 链接按钮（卡较高，**每页放 2 张**）
 10. **pattern boxes** — 3 个小卡
 11. **growth bar / price band** — 两个纯 SVG 图表
 12. **conversation steps** — 带圆形编号的步骤行
@@ -118,7 +118,7 @@ metadata:
 3. 替换所有 `{{TOKEN}}`；删掉没用到的 block；product card / gallery card / 表格行按需复制
 4. `<img src>` 换成真实图片路径（相对路径 `images/...`）
 5. 每页填好 `.foot` 的栏目名 + 页码
-6. 参考完整范例：`examples/mdf-acoustic-brochure/index.html`（8 页，已验证不溢出）
+6. 参考完整范例：`examples/mdf-acoustic-brochure/index.html`（9 页，已验证不溢出）
 
 ### Step 4 — 导出多页 PDF（Letter，分页）
 
@@ -152,7 +152,7 @@ cd <目标目录>
 **发现溢出怎么修**（按这个顺序，都在 template 的 CSS 改）：
 1. 把溢出页的 block 内边距/间距调小（`.box` `.pcard .pb` `.tbl td` `.banner` `.crow` `.pat .b` padding；`.boxes/.pcards` gap）
 2. 图片比例改矮（gallery `.im` 用 `4/3` 而不是 `3/4`）
-3. 还溢出 → 把该页内容拆成两页（产品卡尤其：每页最多 3 张）
+3. 还溢出 → 把该页内容拆成两页（产品卡尤其：每页最多 2 张）
 4. 改完重新跑 Step 4 → 再读 PDF 复查
 
 ### Step 6 — 交付
@@ -179,6 +179,6 @@ cd <目标目录>
 - **Chrome headless 报 GCM / PHONE_REGISTRATION error**：忽略，不影响 PDF。
 
 ## 7. 参考
-- 完整范例（8 页，含图，已验证不溢出）：`examples/mdf-acoustic-brochure/`
+- 完整范例（9 页，含图，已验证不溢出）：`examples/mdf-acoustic-brochure/`
 - 视觉来源：[intco-wallskirt](https://intco-wallskirt.vercel.app)
 - v1 旧模板（单页长滚 + 内容混排）已备份为 `template.html.bak-20260626` / `SKILL.md.bak-20260626`
