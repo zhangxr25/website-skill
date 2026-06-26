@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MDF Acoustic Wood Slat Wall Panels — Market Brochure | INTCO Decor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+:root{
+  --primary:#1a3d6e; --primary-dk:#0f2647;
+  --accent:#e85a2e; --accent-dk:#c9461b;
+  --gray-50:#f8f9fa; --gray-100:#f1f3f5; --gray-200:#e9ecef;
+  --gray-300:#dee2e6; --gray-400:#ced4da; --gray-500:#6c757d; --gray-700:#343a40; --gray-900:#212529;
+  --wood:#7a5234;
+  --shadow:0 4px 16px rgba(0,0,0,.08); --shadow-lg:0 16px 40px rgba(0,0,0,.16);
+}
+html{ background:var(--gray-200); }
+body{
+  font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  color:var(--gray-900); line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  -webkit-print-color-adjust:exact; print-color-adjust:exact;
+}
+img{ display:block; max-width:100%; }
+
+/* ============ PAGE FRAME ============ */
+.page{
+  position:relative; width:816px; height:1056px; background:#fff; overflow:hidden;
+  padding:44px 50px 28px; display:flex; flex-direction:column;
+  margin:26px auto; box-shadow:var(--shadow-lg);
+}
+.page > .body{ flex:1; display:flex; flex-direction:column; min-height:0; overflow:hidden; }
+
+/* eyebrow (orange section tag + right note) */
+.eyebrow{ display:flex; justify-content:space-between; align-items:flex-start; gap:30px; margin-bottom:14px; }
+.eyebrow .tag{ font-size:11px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--accent); padding-top:3px; }
+.eyebrow .note{ font-size:11.5px; font-style:italic; color:var(--gray-500); text-align:right; max-width:320px; line-height:1.45; }
+
+.ptitle{ font-size:33px; font-weight:800; letter-spacing:-.8px; line-height:1.1; color:var(--gray-900); margin-bottom:6px; }
+.rule{ height:3px; width:54px; background:var(--accent); border-radius:2px; margin:12px 0 16px; }
+.lead{ font-size:15px; color:var(--gray-700); line-height:1.6; max-width:680px; }
+.lead strong{ color:var(--gray-900); font-weight:700; }
+
+/* page footer */
+.foot{ flex-shrink:0; display:flex; justify-content:space-between; align-items:center;
+  font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:var(--gray-400); border-top:1px solid var(--gray-200); padding-top:9px; margin-top:14px; }
+.foot .pg{ font-weight:800; color:var(--primary); letter-spacing:0; }
+
+/* ============ COVER ============ */
+.cover{ padding:0; color:#fff; }
+.cover .bg{ position:absolute; inset:0; }
+.cover .bg img{ width:100%; height:100%; object-fit:cover; }
+.cover .scrim{ position:absolute; inset:0; background:linear-gradient(105deg, rgba(15,38,71,.94) 0%, rgba(15,38,71,.80) 42%, rgba(15,38,71,.30) 100%); }
+.cover .inner{ position:relative; height:100%; display:flex; flex-direction:column; padding:54px 56px; }
+.cover .top{ display:flex; justify-content:space-between; align-items:flex-start; }
+.cover .brand .name{ font-size:24px; font-weight:900; letter-spacing:-.5px; }
+.cover .brand .sub{ font-size:11px; letter-spacing:2.5px; text-transform:uppercase; color:#a9c2e6; margin-top:2px; }
+.cover .meta{ text-align:right; font-size:12px; color:#cfe0f5; line-height:1.6; }
+.cover .meta strong{ color:#fff; font-weight:700; }
+.cover .mid{ margin-top:auto; }
+.cover .kicker{ display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:2px; text-transform:uppercase; padding:7px 16px; border-radius:3px; margin-bottom:22px; }
+.cover h1{ font-size:54px; font-weight:900; letter-spacing:-1.6px; line-height:1.04; margin-bottom:20px; }
+.cover .desc{ font-size:16.5px; color:#e4edf9; max-width:520px; line-height:1.6; }
+.cover .chips{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:40px; }
+.cover .chip{ background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.18); border-radius:8px; padding:16px 16px; backdrop-filter:blur(2px); }
+.cover .chip .l{ font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:#a9c2e6; margin-bottom:8px; font-weight:700; }
+.cover .chip .v{ font-size:16px; font-weight:800; line-height:1.2; }
+.cover .foot-line{ margin-top:34px; display:flex; justify-content:space-between; font-size:11.5px; color:#a9c2e6; border-top:1px solid rgba(255,255,255,.16); padding-top:16px; }
+
+/* ============ STAT CARDS (exec summary) ============ */
+.stats{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:18px 0; }
+.stat{ background:var(--gray-50); border:1px solid var(--gray-200); border-top:3px solid var(--accent); border-radius:8px; padding:14px 15px 14px; display:flex; flex-direction:column; }
+.stat .l{ font-size:9.5px; letter-spacing:1.2px; text-transform:uppercase; color:var(--gray-500); font-weight:700; margin-bottom:10px; }
+.stat .n{ font-size:34px; font-weight:900; color:var(--primary); letter-spacing:-1.5px; line-height:1; margin-bottom:8px; }
+.stat .d{ font-size:11px; color:var(--gray-700); line-height:1.45; }
+.stat .spark{ margin-top:auto; padding-top:10px; }
+
+/* generic 2x2 insight boxes */
+.boxes{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.box{ background:#fff; border:1px solid var(--gray-200); border-radius:8px; padding:14px 18px; }
+.box h3{ font-size:14.5px; font-weight:800; color:var(--primary); margin-bottom:8px; }
+.box p{ font-size:12.5px; color:var(--gray-700); line-height:1.55; }
+.box ul{ list-style:none; }
+.box li{ font-size:12.5px; color:var(--gray-700); line-height:1.45; padding-left:16px; position:relative; margin-bottom:4px; }
+.box li:last-child{ margin-bottom:0; }
+.box li::before{ content:""; position:absolute; left:0; top:7px; width:6px; height:6px; border-radius:50%; background:var(--accent); }
+
+/* dark closing banner */
+.banner{ background:var(--primary-dk); color:#fff; border-radius:10px; padding:17px 24px; margin-top:auto; }
+.banner h3{ font-size:16px; font-weight:800; letter-spacing:-.3px; margin-bottom:6px; line-height:1.25; }
+.banner p{ font-size:12px; color:#cfe0f5; line-height:1.5; }
+.banner .ic{ display:inline-block; width:26px; height:26px; border-radius:6px; background:var(--accent); color:#fff; text-align:center; line-height:26px; font-weight:900; margin-right:10px; vertical-align:-6px; }
+
+/* section subhead */
+.subhead{ font-size:11px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--gray-500); margin:15px 0 10px; display:flex; align-items:center; gap:10px; }
+.subhead::after{ content:""; flex:1; height:1px; background:var(--gray-200); }
+
+/* scene gallery (4 wide) */
+.gallery{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+.gcard{ border:1px solid var(--gray-200); border-radius:8px; overflow:hidden; background:#fff; }
+.gcard .im{ aspect-ratio:4/3; overflow:hidden; }
+.gcard .im img{ width:100%; height:100%; object-fit:cover; }
+.gcard .cap{ padding:9px 11px 11px; }
+.gcard .cap h4{ font-size:12px; font-weight:800; color:var(--primary); margin-bottom:3px; }
+.gcard .cap p{ font-size:10px; color:var(--gray-500); line-height:1.4; }
+
+/* market path */
+.path{ display:flex; flex-direction:column; gap:0; margin-top:6px; }
+.prow{ display:grid; grid-template-columns:170px 1fr; gap:18px; align-items:center; padding:10px 0; border-bottom:1px solid var(--gray-200); }
+.prow:last-child{ border-bottom:none; }
+.prow .step{ font-size:11.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--accent); }
+.prow .txt{ font-size:12.5px; color:var(--gray-700); line-height:1.5; }
+
+/* finish swatches */
+.swatches{ display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-top:4px; }
+.sw{ text-align:center; }
+.sw .chip{ height:40px; border-radius:7px; border:1px solid rgba(0,0,0,.10); box-shadow:inset 0 -8px 14px rgba(0,0,0,.12); margin-bottom:6px; }
+.sw .nm{ font-size:11px; font-weight:700; color:var(--gray-700); }
+
+/* checklist table */
+.tbl{ width:100%; border-collapse:collapse; border:1px solid var(--gray-200); border-radius:8px; overflow:hidden; }
+.tbl th{ background:var(--primary); color:#fff; font-size:10px; letter-spacing:1.2px; text-transform:uppercase; text-align:left; padding:8px 14px; font-weight:700; }
+.tbl td{ font-size:11.5px; color:var(--gray-700); padding:7px 14px; border-top:1px solid var(--gray-200); line-height:1.4; vertical-align:top; }
+.tbl tr:nth-child(even) td{ background:var(--gray-50); }
+.tbl td.area{ font-weight:800; color:var(--gray-900); white-space:nowrap; }
+.tbl td.pick{ font-weight:600; color:var(--primary); }
+
+/* product cards — strong card treatment (accent edge + tinted spec panel = card-in-card) */
+.pcards{ display:flex; flex-direction:column; gap:13px; }
+.pcard{ display:grid; grid-template-columns:168px 1fr; border:1px solid var(--gray-300); border-left:4px solid var(--primary); border-radius:13px; overflow:hidden; background:#fff; }
+.pcard .im{ position:relative; background:var(--gray-100); border-right:1px solid var(--gray-200); }
+.pcard .im img{ width:100%; height:100%; object-fit:cover; }
+.pcard .rank{ position:absolute; top:11px; left:11px; background:var(--accent); color:#fff; font-size:15px; font-weight:900; padding:6px 13px; border-radius:7px; letter-spacing:.3px; }
+.pcard .pb{ padding:12px 18px; display:flex; flex-direction:column; }
+.pcard .ph{ display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:6px; }
+.pcard .pt{ font-size:14px; font-weight:800; color:var(--gray-900); line-height:1.3; }
+.pcard .mk{ font-size:8.5px; font-weight:800; letter-spacing:.8px; text-transform:uppercase; color:#fff; background:var(--primary); padding:4px 10px; border-radius:20px; white-space:nowrap; align-self:flex-start; }
+.pcard .brand{ font-size:11px; font-weight:800; letter-spacing:.8px; text-transform:uppercase; color:var(--accent); margin-bottom:9px; }
+.specs{ display:grid; grid-template-columns:repeat(4,1fr); gap:9px 12px; padding:10px 13px; background:var(--gray-50); border:1px solid var(--gray-200); border-radius:9px; }
+.sp .l{ font-size:9px; letter-spacing:.8px; text-transform:uppercase; color:var(--gray-500); font-weight:700; margin-bottom:2px; }
+.sp .v{ font-size:12.5px; font-weight:700; color:var(--gray-900); }
+.sp .v.price{ color:var(--accent); }
+.sp .v.heat{ color:var(--primary); }
+.sp .v.mono{ font-family:Consolas,monospace; font-size:11px; }
+.pcard .nt{ font-size:11px; color:var(--gray-700); line-height:1.4; margin-top:9px; }
+.pcard .src{ font-size:9.5px; font-style:italic; color:var(--gray-400); margin-top:6px; }
+
+/* pattern mini boxes (3) */
+.pat{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:2px; }
+.pat .b{ background:var(--gray-50); border:1px solid var(--gray-200); border-top:3px solid var(--accent); border-radius:8px; padding:16px 18px; }
+.pat .b h4{ font-size:13.5px; font-weight:800; color:var(--primary); margin-bottom:8px; }
+.pat .b p{ font-size:11.5px; color:var(--gray-700); line-height:1.55; }
+
+/* price band chart */
+.priceband{ margin:8px 0 2px; }
+
+/* conversation steps */
+.conv{ display:flex; flex-direction:column; gap:0; }
+.crow{ display:grid; grid-template-columns:36px 150px 1fr; gap:14px; align-items:start; padding:8px 0; border-bottom:1px solid var(--gray-200); }
+.crow:last-child{ border-bottom:none; }
+.crow .no{ width:28px; height:28px; border-radius:50%; background:var(--accent); color:#fff; font-size:13px; font-weight:800; text-align:center; line-height:28px; }
+.crow .k{ font-size:11.5px; font-weight:800; letter-spacing:.8px; text-transform:uppercase; color:var(--primary); line-height:1.3; padding-top:5px; }
+.crow .t{ font-size:12px; color:var(--gray-700); line-height:1.5; padding-top:4px; }
+
+/* methodology */
+.method{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.mcol{ background:var(--gray-50); border:1px solid var(--gray-200); border-radius:8px; padding:18px 20px; }
+.mcol h3{ font-size:13px; font-weight:800; color:var(--gray-900); padding-bottom:8px; border-bottom:2px solid var(--accent); display:inline-block; margin-bottom:12px; }
+.mcol li{ list-style:none; font-size:11.5px; color:var(--gray-700); line-height:1.5; padding-left:18px; position:relative; margin-bottom:8px; }
+.mcol li::before{ content:"▸"; position:absolute; left:0; color:var(--accent); font-weight:800; }
+.mcol li.ex::before{ content:"✕"; color:var(--gray-400); }
+.sources{ display:grid; grid-template-columns:1fr 1fr; gap:8px 18px; margin-top:6px; }
+.src-row{ display:grid; grid-template-columns:22px 1fr; gap:10px; align-items:start; }
+.src-row .n{ width:20px; height:20px; border-radius:50%; background:var(--primary); color:#fff; font-size:10.5px; font-weight:800; text-align:center; line-height:20px; }
+.src-row .x{ font-size:10.5px; color:var(--gray-700); line-height:1.45; }
+.src-row .x b{ color:var(--gray-900); }
+.disc{ font-size:9.5px; color:var(--gray-500); line-height:1.5; margin-top:auto; border-top:1px solid var(--gray-200); padding-top:12px; }
+
+/* ============ PRINT ============ */
+@media print{
+  @page{ size:8.5in 11in; margin:0; }
+  html,body{ background:#fff; margin:0; }
+  .page{ margin:0; box-shadow:none; page-break-after:always; break-after:page; }
+  .page:last-child{ page-break-after:avoid; break-after:auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================ PAGE 1 — COVER ============================ -->
+<section class="page cover">
+  <div class="bg">
+    <img src="images/scenes/hero_wood_slat_decor_acoustic_reason.jpg" alt="Wood slat wall panel feature wall" />
+  </div>
+  <div class="scrim"></div>
+  <div class="inner">
+    <div class="top">
+      <div class="brand">
+        <div class="name">INTCO Decor</div>
+        <div class="sub">Market Intelligence</div>
+      </div>
+      <div class="meta">
+        <div><strong>Amazon North America</strong></div>
+        <div>Snapshot: June 26, 2026</div>
+      </div>
+    </div>
+    <div class="mid">
+      <span class="kicker">Market Product Research</span>
+      <h1>MDF Acoustic Wood<br/>Slat Wall Panels</h1>
+      <p class="desc">A buyer-facing category readout for importers who know building materials, but are new to decorative acoustic wall panels.</p>
+      <div class="chips">
+        <div class="chip"><div class="l">Purpose</div><div class="v">New category introduction</div></div>
+        <div class="chip"><div class="l">Market</div><div class="v">Amazon US + Canada</div></div>
+        <div class="chip"><div class="l">Positioning</div><div class="v">Decor first, acoustic second</div></div>
+        <div class="chip"><div class="l">Output</div><div class="v">Readout + Top Cards</div></div>
+      </div>
+      <div class="foot-line">
+        <span>Prepared for seasonal market update and new product sourcing discussions.</span>
+        <span>INTCO Decor — 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PAGE 2 — EXECUTIVE SUMMARY ============================ -->
+<section class="page">
+  <div class="body">
+    <div class="eyebrow">
+      <div class="tag">Executive Summary</div>
+      <div class="note">For customers new to the category, lead with the market logic before showing ASINs.</div>
+    </div>
+    <h1 class="ptitle">Why This Category Is Worth<br/>Showing to Importers</h1>
+    <div class="rule"></div>
+    <p class="lead"><strong>MDF acoustic wood slat panels are not commodity studio foam.</strong> They are decorative building-material panels that add warmth, texture, and a premium feature-wall look, while the felt or polyester backing gives a practical acoustic reason to buy.</p>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="l">Top Amazon Signal</div>
+        <div class="n">400+<span style="font-size:15px;color:var(--gray-500);font-weight:700">/mo</span></div>
+        <div class="d">NeatiEase listing showed 400+ bought in past month on Amazon US during the web check.</div>
+      </div>
+      <div class="stat">
+        <div class="l">Category Rank Proof</div>
+        <div class="n">#5</div>
+        <div class="d">NeatiEase ranked #5 in Recording Studio Acoustical Treatments on Amazon US.</div>
+      </div>
+      <div class="stat">
+        <div class="l">Retail Validation</div>
+        <div class="n">$199</div>
+        <div class="d">Home Depot lists a 2-piece 94.5 in x 23.8 in set at $199 with MDF/PET sound absorption.</div>
+      </div>
+      <div class="stat">
+        <div class="l">Macro Category</div>
+        <div class="n">5.0%</div>
+        <div class="d">Architectural acoustic panels forecast to grow at 5.0% CAGR, 2026–2034.</div>
+        <div class="spark">
+          <svg viewBox="0 0 150 54" width="100%" height="54" preserveAspectRatio="none">
+            <line x1="6" y1="48" x2="144" y2="48" stroke="#dee2e6" stroke-width="1"/>
+            <rect x="26" y="30" width="34" height="18" rx="2" fill="#9db4d4"/>
+            <rect x="92" y="10" width="34" height="38" rx="2" fill="#1a3d6e"/>
+            <text x="43" y="26" font-size="9" font-weight="700" fill="#6c757d" text-anchor="middle">$9.1B</text>
+            <text x="109" y="6.5" font-size="9" font-weight="800" fill="#1a3d6e" text-anchor="middle">$12.6B</text>
+            <text x="43" y="53.5" font-size="7.5" fill="#6c757d" text-anchor="middle">2026</text>
+            <text x="109" y="53.5" font-size="7.5" fill="#6c757d" text-anchor="middle">2034</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="boxes">
+      <div class="box"><h3>Customer problem</h3><p>Residential and small-office spaces have many hard surfaces. Buyers want a warmer room, a better video-call backdrop, and some echo reduction without hiring a contractor for a full remodel.</p></div>
+      <div class="box"><h3>Importer opportunity</h3><p>Position this as a premium home-improvement decor material: easy feature-wall transformation, warm wood finishes, repeatable pack sizes, and room-scene merchandising.</p></div>
+      <div class="box"><h3>What makes it different</h3><p>Compared with peel-and-stick trim or flat wall panels, the vertical slat + felt construction creates both a visible 3D surface and a functional acoustic story.</p></div>
+      <div class="box"><h3>Main risk</h3><p>Customers may confuse MDF veneer, printed MDF, real wood veneer, PET felt, and foam. Claims and images must be accurate to avoid returns and trust issues.</p></div>
+    </div>
+
+    <div class="banner">
+      <h3><span class="ic">!</span>Recommendation: introduce as a premium decor upgrade, not as cheap soundproofing.</h3>
+      <p>The best selling angle is room transformation first: TV walls, bedrooms, offices, living rooms. Acoustic absorption supports the purchase decision, but should not be the only promise.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Executive Summary</span><span class="pg">02</span></div>
+</section>
+
+<!-- ============================ PAGE 3 — MARKET READOUT ============================ -->
+<section class="page">
+  <div class="body">
+    <div class="eyebrow">
+      <div class="tag">Market Readout</div>
+      <div class="note">A fixed readout page explaining what the product is, why it is trending, and how Amazon demand should be interpreted.</div>
+    </div>
+    <h1 class="ptitle">Category Context for First-Time Buyers</h1>
+    <div class="rule"></div>
+
+    <div class="boxes">
+      <div class="box"><h3>Category identity</h3><p>MDF or wood slat acoustic wall panels are decorative wall panels with vertical slats attached to a felt or polyester acoustic backing. They sit between interior wall decor, building materials, and light acoustic treatment.</p></div>
+      <div class="box"><h3>Trend driver</h3><p>Interior design is moving back toward warmer, more architectural walls. Design coverage highlights renewed interest in wood paneling, visible grain, texture, and home interiors with character.</p></div>
+      <div class="box"><h3>Demand signal</h3><p>Amazon shows visible sell-through signals on selected US listings, while Canada often requires BSR and review strength as supporting signals. This is a premium niche, not a mass foam-panel segment.</p></div>
+      <div class="box"><h3>Competitive structure</h3><p>Winning listings rely on large room-scene images, easy install messaging, material proof, pack coverage, color options, and price-per-area clarity.</p></div>
+    </div>
+
+    <div class="subhead">Where shoppers imagine using it</div>
+    <div class="gallery">
+      <div class="gcard"><div class="im"><img src="images/scenes/tv_feature_wall.jpg" alt="TV feature wall"/></div><div class="cap"><h4>TV Feature Wall</h4><p>Fast visual upgrade for media rooms.</p></div></div>
+      <div class="gcard"><div class="im"><img src="images/scenes/bedroom_headboard_wall.jpg" alt="Bedroom headboard wall"/></div><div class="cap"><h4>Bedroom Headboard</h4><p>Hotel-like wall texture behind bed.</p></div></div>
+      <div class="gcard"><div class="im"><img src="images/scenes/office_workspace_wall.jpg" alt="Office backdrop"/></div><div class="cap"><h4>Office Backdrop</h4><p>Warmer video-call background.</p></div></div>
+      <div class="gcard"><div class="im"><img src="images/scenes/living_room_wall.jpg" alt="Living room wall"/></div><div class="cap"><h4>Living Room Wall</h4><p>Premium accent wall or fireplace zone.</p></div></div>
+    </div>
+
+    <div class="subhead">Market path</div>
+    <div class="path">
+      <div class="prow"><div class="step">From basic panels</div><div class="txt">Traditional wall paneling and trim already teach consumers to use walls as design features.</div></div>
+      <div class="prow"><div class="step">To 3D texture</div><div class="txt">Vertical slats and fluted surfaces create a more modern, architectural look than flat paneling or molding.</div></div>
+      <div class="prow"><div class="step">To acoustic decor</div><div class="txt">Felt-backed slat panels add a practical reason: reducing echo in calls, conversations, and media rooms.</div></div>
+    </div>
+  </div>
+  <div class="foot"><span>Market Readout</span><span class="pg">03</span></div>
+</section>
+
+<!-- ============================ PAGE 4 — PRODUCT ANATOMY ============================ -->
+<section class="page">
+  <div class="body">
+    <div class="eyebrow">
+      <div class="tag">Product Anatomy</div>
+      <div class="note">Translate the market trend into product and listing decisions for importers.</div>
+    </div>
+    <h1 class="ptitle">What Sells on Amazon</h1>
+    <div class="rule"></div>
+
+    <div class="boxes">
+      <div class="box"><h3>Core construction</h3><ul><li>MDF or wood veneer slats</li><li>Felt / PET / polyester backing</li><li>Large panel sizes around 47 in or 94 in height</li></ul></div>
+      <div class="box"><h3>Winning finishes</h3><ul><li>Walnut, oak, teak, black oak, grey oak</li><li>Warm wood tones support the 2026 wood-paneling trend</li><li>Color consistency matters for repeat orders</li></ul></div>
+      <div class="box"><h3>Merchandising message</h3><ul><li>Feature wall transformation</li><li>Easy install with adhesive, screws, or nails</li><li>Sound absorption / echo reduction, not full soundproofing</li></ul></div>
+      <div class="box"><h3>Buying friction</h3><ul><li>Customers need to calculate wall coverage</li><li>Cutting around outlets requires tools</li><li>Material expectation must be clear: MDF vs real wood veneer</li></ul></div>
+    </div>
+
+    <div class="subhead">Winning finishes — color family</div>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#5c3a21"></div><div class="nm">Walnut</div></div>
+      <div class="sw"><div class="chip" style="background:#c79a5b"></div><div class="nm">Oak</div></div>
+      <div class="sw"><div class="chip" style="background:#a9692f"></div><div class="nm">Teak</div></div>
+      <div class="sw"><div class="chip" style="background:#2c2722"></div><div class="nm">Black Oak</div></div>
+      <div class="sw"><div class="chip" style="background:#9a958a"></div><div class="nm">Grey Oak</div></div>
+    </div>
+
+    <div class="subhead">Importer merchandising checklist</div>
+    <table class="tbl">
+      <thead><tr><th style="width:130px">Decision Area</th><th style="width:230px">Recommended Starter Choice</th><th>Reason</th></tr></thead>
+      <tbody>
+        <tr><td class="area">Assortment</td><td class="pick">2-3 finishes, 2 pack sizes</td><td>Keeps SKU count manageable while covering popular wood tones.</td></tr>
+        <tr><td class="area">Hero image</td><td class="pick">Room scene first, product detail second</td><td>The category sells visual transformation faster than spec tables.</td></tr>
+        <tr><td class="area">Copy angle</td><td class="pick">Decor + echo reduction</td><td>Avoid overpromising soundproofing; focus on comfort and ambience.</td></tr>
+        <tr><td class="area">Packaging</td><td class="pick">Protect long edges and veneer surface</td><td>Damage and color inconsistency are visible return drivers.</td></tr>
+        <tr><td class="area">Sales support</td><td class="pick">Coverage calculator + install guide</td><td>Reduces uncertainty for first-time DIY buyers.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="banner">
+      <h3><span class="ic">✦</span>Commercial read: sell the look, prove the material, clarify the acoustic promise.</h3>
+      <p>For a new importer, the best path is a tight starter line with strong room imagery, clear coverage data, and honest material language.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Product Anatomy</span><span class="pg">04</span></div>
+</section>
+
+<!-- ============================ PAGE 5 — TOP CARDS (US) ============================ -->
+<section class="page">
+  <div class="body">
+    <div class="eyebrow">
+      <div class="tag">Amazon Top Cards</div>
+      <div class="note">Top cards start after market education. Rows combine live web checks and prior Keepa/Chrome validation.</div>
+    </div>
+    <h1 class="ptitle">US-Led Demand Signals</h1>
+    <div class="rule"></div>
+
+    <div class="pcards">
+      <article class="pcard">
+        <div class="im"><span class="rank">#1</span><img src="images/products/rank_1_B0DGTBH3XF.jpg" alt="NeatiEase"/></div>
+        <div class="pb">
+          <div class="ph"><div class="pt">NeatiEase Wood Panels for Wall, 4-Piece 96 in x 12.6 in Soundproof Wood Slat Wall Panel</div><div class="mk">Market: US</div></div>
+          <div class="brand">NeatiEase</div>
+          <div class="specs">
+            <div class="sp"><div class="l">Price</div><div class="v price">$179.99</div></div>
+            <div class="sp"><div class="l">Demand</div><div class="v heat">400+/mo</div></div>
+            <div class="sp"><div class="l">BSR</div><div class="v">#5 category</div></div>
+            <div class="sp"><div class="l">Rating</div><div class="v">4.6 (489)</div></div>
+            <div class="sp"><div class="l">Material</div><div class="v">MDF + polyester</div></div>
+            <div class="sp"><div class="l">Size</div><div class="v">96 x 12.6 in</div></div>
+            <div class="sp"><div class="l">Signal</div><div class="v">Amazon's Choice</div></div>
+            <div class="sp"><div class="l">ASIN</div><div class="v mono">B0DGTBH3XF</div></div>
+          </div>
+          <div class="nt">Best current US proof point: visible 400+ bought-in-past-month, strong category rank, and customer language focused on appearance, installation, value, and acoustics.</div>
+          <div class="src">Source: Amazon live page check, June 26, 2026.</div>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <div class="im"><span class="rank">#2</span><img src="images/products/rank_2_B0FN79B7QF.jpg" alt="TONOR"/></div>
+        <div class="pb">
+          <div class="ph"><div class="pt">TONOR Wood Slatwall Panels, 2-Pack / 4-Pack Family, 47.2 in x 23.6 in Acoustic Wall Panels</div><div class="mk">Markets: US + CA</div></div>
+          <div class="brand">TONOR</div>
+          <div class="specs">
+            <div class="sp"><div class="l">Price</div><div class="v price">$52-$110</div></div>
+            <div class="sp"><div class="l">Demand</div><div class="v heat">200+ to 1K+</div></div>
+            <div class="sp"><div class="l">Rank</div><div class="v">#1 family signal</div></div>
+            <div class="sp"><div class="l">Rating</div><div class="v">4.5-4.6</div></div>
+            <div class="sp"><div class="l">Material</div><div class="v">MDF + veneer</div></div>
+            <div class="sp"><div class="l">Size</div><div class="v">47.2 x 23.6 in</div></div>
+            <div class="sp"><div class="l">Options</div><div class="v">Oak / Walnut / Gray</div></div>
+            <div class="sp"><div class="l">ASIN</div><div class="v mono">B0FN79B7QF</div></div>
+          </div>
+          <div class="nt">TONOR shows the family effect: multiple color and pack-size variants appear in Amazon results with strong bought signals and broad decor/acoustic copy.</div>
+          <div class="src">Source: Amazon search/result page checks and prior Chrome validation.</div>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <div class="im"><span class="rank">#3</span><img src="images/products/rank_3_B0BWRMFSZ8.jpg" alt="Art3d"/></div>
+        <div class="pb">
+          <div class="ph"><div class="pt">Art3d Wood Slat Acoustic Panels, Set of 4 3D Fluted Walnut Brown</div><div class="mk">Markets: US + CA</div></div>
+          <div class="brand">Art3d</div>
+          <div class="specs">
+            <div class="sp"><div class="l">Price</div><div class="v price">C$139.49</div></div>
+            <div class="sp"><div class="l">Demand</div><div class="v heat">100/mo CA</div></div>
+            <div class="sp"><div class="l">BSR</div><div class="v">CA #149</div></div>
+            <div class="sp"><div class="l">Rating</div><div class="v">4.2 (992)</div></div>
+            <div class="sp"><div class="l">Material</div><div class="v">MDF + felt</div></div>
+            <div class="sp"><div class="l">Size</div><div class="v">23.6 x 47.2 in</div></div>
+            <div class="sp"><div class="l">Use case</div><div class="v">Wall / ceiling</div></div>
+            <div class="sp"><div class="l">ASIN</div><div class="v mono">B0BWRMFSZ8</div></div>
+          </div>
+          <div class="nt">High-review reference row showing the category's decor + noise-reduction message and a visible Canada sales signal from prior validation.</div>
+          <div class="src">Source: Amazon Art3d page and prior Keepa/Chrome Canada validation.</div>
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="foot"><span>Amazon Top Cards — US-Led Signals</span><span class="pg">05</span></div>
+</section>
+
+<!-- ============================ PAGE 6 — TOP CARDS (CA) ============================ -->
+<section class="page">
+  <div class="body">
+    <div class="eyebrow">
+      <div class="tag">Amazon Top Cards</div>
+      <div class="note">Canada rows are weaker on visible monthly units, so BSR and review signals carry more weight.</div>
+    </div>
+    <h1 class="ptitle">Canada Reference Rows + Market Pattern</h1>
+    <div class="rule"></div>
+
+    <div class="pcards">
+      <article class="pcard">
+        <div class="im"><span class="rank">#4</span><img src="images/products/rank_4_B0CM6891WD.jpg" alt="RITOLLO"/></div>
+        <div class="pb">
+          <div class="ph"><div class="pt">RITOLLO Wood Slat Panels for Wall, 2-Piece 94.5 in x 11 in Acoustic Panels</div><div class="mk">Market: CA</div></div>
+          <div class="brand">RITOLLO</div>
+          <div class="specs">
+            <div class="sp"><div class="l">Price</div><div class="v price">C$101.99</div></div>
+            <div class="sp"><div class="l">Demand</div><div class="v">Not exposed</div></div>
+            <div class="sp"><div class="l">BSR</div><div class="v">CA #752</div></div>
+            <div class="sp"><div class="l">Rating</div><div class="v">4.4 (215)</div></div>
+            <div class="sp"><div class="l">Material</div><div class="v">MDF + polyester</div></div>
+            <div class="sp"><div class="l">Size</div><div class="v">94.5 x 11 in</div></div>
+            <div class="sp"><div class="l">Signal</div><div class="v">Canada BSR</div></div>
+            <div class="sp"><div class="l">ASIN</div><div class="v mono">B0CM6891WD</div></div>
+          </div>
+          <div class="nt">Canada reference: validated as in-scope MDF/wood-slat acoustic construction. Monthly bought signal was not exposed.</div>
+          <div class="src">Source: prior Keepa/Chrome Canada validation.</div>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <div class="im"><span class="rank">#5</span><img src="images/products/rank_5_B0DM1M2B8H.jpg" alt="VEVOR"/></div>
+        <div class="pb">
+          <div class="ph"><div class="pt">VEVOR Wood Slat Acoustic Panels, 7.9 in x 94.5 in MDF Accent Wooden Wall Panels</div><div class="mk">Market: CA</div></div>
+          <div class="brand">VEVOR</div>
+          <div class="specs">
+            <div class="sp"><div class="l">Price</div><div class="v price">C$361.89</div></div>
+            <div class="sp"><div class="l">Demand</div><div class="v">Not exposed</div></div>
+            <div class="sp"><div class="l">BSR</div><div class="v">CA #2,831</div></div>
+            <div class="sp"><div class="l">Rating</div><div class="v">4.4 (51)</div></div>
+            <div class="sp"><div class="l">Material</div><div class="v">MDF + felt</div></div>
+            <div class="sp"><div class="l">Size</div><div class="v">7.9 x 94.5 in</div></div>
+            <div class="sp"><div class="l">Signal</div><div class="v">CA reference</div></div>
+            <div class="sp"><div class="l">ASIN</div><div class="v mono">B0DM1M2B8H</div></div>
+          </div>
+          <div class="nt">Higher-ticket Canada reference row; useful for price-band awareness and MDF material positioning.</div>
+          <div class="src">Source: prior Keepa/Chrome Canada validation and VEVOR product page context.</div>
+        </div>
+      </article>
+    </div>
+
+    <div class="subhead">Amazon Pattern for Importers</div>
+    <div class="pat">
+      <div class="b"><h4>Demand concentrates in US</h4><p>US pages expose clearer bought-in-past-month signals. Use US for demand proof and Canada for secondary validation.</p></div>
+      <div class="b"><h4>Family variants matter</h4><p>Color, pack count, and size variants can split signals across multiple ASINs. Evaluate family depth before judging winners.</p></div>
+      <div class="b"><h4>Price band is broad</h4><p>Small packs can appear near $50-$110, while large-format or Canada rows may sit around C$100-C$360.</p></div>
+    </div>
+
+    <div class="banner">
+      <h3><span class="ic">→</span>For a buyer presentation, show the product family logic, not only the top ASIN.</h3>
+      <p>Importers need to know which finishes, pack sizes, coverage claims, and scene images can become an assortment, not just which listing ranks today.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Amazon Top Cards — Canada and Pattern</span><span class="pg">06</span></div>
+</section>
+
+<!-- ============================ PAGE 7 — IMPORTER TAKEAWAY ============================ -->
+<section class="page">
+  <div class="body">
+    <div class="eyebrow">
+      <div class="tag">Importer Takeaway</div>
+      <div class="note">Turn the market readout into a practical sourcing and sales conversation.</div>
+    </div>
+    <h1 class="ptitle">How to Introduce the Category</h1>
+    <div class="rule"></div>
+
+    <div class="boxes">
+      <div class="box"><h3>Starter assortment</h3><ul><li>Walnut / oak / black or grey oak finishes</li><li>One long-format panel and one smaller modular panel</li><li>2-pack and 4-pack options for different room sizes</li><li>Matching trim/end cap or screw/accessory bundle if feasible</li></ul></div>
+      <div class="box"><h3>Sales story</h3><ul><li>Fast room transformation for TV wall, bedroom, office</li><li>Warmer texture compared with painted walls</li><li>Light sound absorption for everyday echo reduction</li><li>DIY-friendly install with clear guide and calculator</li></ul></div>
+      <div class="box"><h3>Operational checks</h3><ul><li>Edge protection and panel flatness during shipping</li><li>Color consistency across batches</li><li>VOC/formaldehyde compliance language where applicable</li><li>Clear material naming: MDF, veneer, PET felt, polyester</li></ul></div>
+      <div class="box"><h3>Launch assets</h3><ul><li>Room scene first image, then detail close-up</li><li>Coverage diagram and installation steps</li><li>Side profile / thickness / backing material image</li><li>Use-case gallery: TV, headboard, office, living room</li></ul></div>
+    </div>
+
+    <div class="subhead">Suggested customer conversation</div>
+    <div class="conv">
+      <div class="crow"><div class="no">1</div><div class="k">Establish trend</div><div class="t">Wood walls and textured panels are returning because consumers want warmth, character, and room-specific design features.</div></div>
+      <div class="crow"><div class="no">2</div><div class="k">Show demand proof</div><div class="t">Amazon shows real bought signals and strong category rankings for selected MDF acoustic wood slat listings.</div></div>
+      <div class="crow"><div class="no">3</div><div class="k">Explain assortment</div><div class="t">Use finishes, panel sizes, and pack counts to build an entry line rather than copying one ASIN.</div></div>
+      <div class="crow"><div class="no">4</div><div class="k">Manage risk</div><div class="t">Position as decorative acoustic paneling, not complete soundproofing; be precise about materials and installation.</div></div>
+    </div>
+
+    <div class="banner">
+      <h3><span class="ic">★</span>Best fit customer profile</h3>
+      <p>Importers already active in wall panels, trim, DIY decor, home improvement, or building-material retail who want a higher-ticket, design-led category for seasonal market updates.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Importer Takeaway</span><span class="pg">07</span></div>
+</section>
+
+<!-- ============================ PAGE 8 — METHODOLOGY ============================ -->
+<section class="page">
+  <div class="body">
+    <div class="eyebrow">
+      <div class="tag">Methodology &amp; Disclaimer</div>
+      <div class="note">Source context and limitations for a market-product research brochure.</div>
+    </div>
+    <h1 class="ptitle">How to Read This Report</h1>
+    <div class="rule"></div>
+
+    <div class="method">
+      <div class="mcol">
+        <h3>Data method</h3>
+        <ul>
+          <li>Amazon Top Cards combine current web checks and previously validated Keepa/Chrome rows.</li>
+          <li>Visible bought-in-past-month is treated as the strongest public Amazon sell-through signal.</li>
+          <li>Where monthly bought signal is missing, BSR, reviews, rating, price, and page validation are used as secondary signals.</li>
+          <li>Canada signals are weaker than US signals; do not overread missing monthly sales as zero demand.</li>
+        </ul>
+      </div>
+      <div class="mcol">
+        <h3>Scope</h3>
+        <ul>
+          <li>Include: MDF or wood slat acoustic wall panels with felt/PET/polyester backing.</li>
+          <li class="ex">Exclude: acoustic foam tiles, felt-only PET tiles, wallpaper, curtains, blankets, and lighting accessories.</li>
+          <li>Retail channel examples are used to validate product positioning, not to rank Amazon sellers.</li>
+          <li>Amazon data can change by day, marketplace, session, inventory, and variant selection.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="subhead">Primary sources checked</div>
+    <div class="sources">
+      <div class="src-row"><div class="n">1</div><div class="x"><b>Amazon — NeatiEase B0DGTBH3XF:</b> current page showed 400+ bought in past month, 4.6 rating, 489 reviews, and #5 in Recording Studio Acoustical Treatments.</div></div>
+      <div class="src-row"><div class="n">2</div><div class="x"><b>Amazon — TONOR family:</b> material and variant evidence for MDF / wood veneer / high-density polyester acoustic panel positioning.</div></div>
+      <div class="src-row"><div class="n">3</div><div class="x"><b>Fortune Business Insights:</b> architectural acoustic panels market forecast from USD 9.1B in 2026 to USD 12.6B by 2034 at 5.0% CAGR.</div></div>
+      <div class="src-row"><div class="n">4</div><div class="x"><b>Floor &amp; Decor:</b> acoustic slat panels presented as "style meets sound control" with wood veneer and recycled felt backing.</div></div>
+      <div class="src-row"><div class="n">5</div><div class="x"><b>The Home Depot — Everbilt:</b> mainstream retail example with 94.5 in x 23.8 in panels, 31 sq.ft coverage, wood veneer/PET fiberboard, and $199 price point.</div></div>
+      <div class="src-row"><div class="n">6</div><div class="x"><b>Vogue:</b> design trend context on renewed demand for wood-paneled walls, warmth, texture, and architectural detail.</div></div>
+      <div class="src-row"><div class="n">7</div><div class="x"><b>WIRED:</b> hands-on home office context for MDF slat panels with felt backing, easy makeover value, and installation friction.</div></div>
+    </div>
+
+    <div class="disc">
+      <strong>Disclaimer.</strong> This report is market-product research for merchandising and sourcing discussion. It is not legal, financial, engineering, or acoustic-performance advice. Amazon ranks, ratings, prices, bought signals, and availability should be rechecked before customer presentation or purchasing decisions. Brand names and ASINs are references for benchmarking only; INTCO Decor is not affiliated with Amazon or the listed brands.
+    </div>
+  </div>
+  <div class="foot"><span>Methodology &amp; Disclaimer</span><span class="pg">08</span></div>
+</section>
+
+</body></html>

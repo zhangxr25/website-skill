@@ -2,430 +2,521 @@
 <html lang="en"><head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Amazon NA · MDF Acoustic Wood Slat Wall Panels — Market Readout | INTCO Decor</title>
+<title>{{DOC_TITLE}} | INTCO Decor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!-- ============================================================================
+INTCO Decor — PAGINATED BROCHURE TEMPLATE (layout-only)
+- This template ONLY lays out content you already have. It does NOT generate content.
+- Page model: fixed Letter page (816×1056px @96dpi). Each <section class="page"> = ONE printed page.
+- Page anatomy: .page > (.eyebrow + .ptitle + .rule + ...content... + .banner[optional]) + .foot
+  * .body is flex:1 so content fills the page; a closing .banner uses margin-top:auto to sit at the page bottom (kills bottom whitespace).
+  * .foot is in normal flow → it can never overlap content.
+- A4 instead of Letter? change .page {width:794px;height:1123px} AND @page {size:A4}.
+- CRITICAL: content must fit each page. Overflow is CLIPPED (overflow:hidden), so VERIFY every page after PDF export.
+============================================================================ -->
 <style>
 *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
-:root {
+:root{
   --primary:#1a3d6e; --primary-dk:#0f2647;
   --accent:#e85a2e; --accent-dk:#c9461b;
   --gray-50:#f8f9fa; --gray-100:#f1f3f5; --gray-200:#e9ecef;
-  --gray-300:#dee2e6; --gray-500:#6c757d; --gray-700:#343a40; --gray-900:#212529;
-  --shadow:0 4px 16px rgba(0,0,0,.08); --shadow-lg:0 12px 32px rgba(0,0,0,.12);
+  --gray-300:#dee2e6; --gray-400:#ced4da; --gray-500:#6c757d; --gray-700:#343a40; --gray-900:#212529;
+  --wood:#7a5234;
+  --shadow:0 4px 16px rgba(0,0,0,.08); --shadow-lg:0 16px 40px rgba(0,0,0,.16);
 }
-html { scroll-behavior:smooth; }
-body { font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; color:var(--gray-900); background:#fff; line-height:1.6; -webkit-font-smoothing:antialiased; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
-html { background:#fff; }
-a { color:inherit; text-decoration:none; }
-img { display:block; max-width:100%; height:auto; }
-
-/* Top strip + header */
-.top-strip { background:var(--primary-dk); color:#cfe0f5; font-size:12.5px; padding:7px 16px; text-align:center; }
-.top-strip strong { color:#fff; }
-.header { background:#fff; border-bottom:1px solid var(--gray-200); position:sticky; top:0; z-index:100; box-shadow:0 1px 3px rgba(0,0,0,.08); }
-.header-inner { max-width:1280px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:18px 32px; gap:30px; }
-.logo { display:flex; flex-direction:column; }
-.logo .name { font-size:22px; font-weight:800; color:var(--primary); letter-spacing:-.5px; }
-.logo .tag { font-size:11px; color:var(--gray-500); text-transform:uppercase; letter-spacing:1.5px; }
-.header-meta { font-size:12.5px; color:var(--gray-500); text-align:right; }
-.header-meta strong { color:var(--gray-900); font-weight:700; }
-
-/* Hero */
-.hero { position:relative; width:100%; height:520px; overflow:hidden; background:#000; }
-.hero img { width:100%; height:100%; object-fit:cover; opacity:.78; }
-.hero-overlay { position:absolute; inset:0; display:flex; align-items:flex-end; padding:50px 32px; background:linear-gradient(to top, rgba(15,38,71,.85) 0%, rgba(15,38,71,.15) 60%, transparent 100%); }
-.hero-overlay-inner { max-width:1280px; margin:0 auto; width:100%; color:#fff; }
-.hero-tag { display:inline-block; background:var(--accent); color:#fff; padding:5px 14px; border-radius:3px; font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:18px; }
-.hero h1 { font-size:46px; font-weight:800; letter-spacing:-1px; line-height:1.15; max-width:880px; margin-bottom:18px; }
-.hero p { font-size:17px; max-width:680px; opacity:.92; }
-
-/* Section */
-.section { padding:64px 32px; background:#fff; }
-/* .section.alt 灰底已废弃 — 留 class 在 HTML 不影响（CSS 已无规则）。整份报告全白底节奏靠卡片 border + shadow 区分。 */
-.section-inner { max-width:1280px; margin:0 auto; }
-.section-head { margin-bottom:36px; }
-.section-head h2 { font-size:30px; font-weight:800; color:var(--gray-900); letter-spacing:-.5px; margin-bottom:10px; }
-.section-head p { font-size:15.5px; color:var(--gray-500); max-width:760px; }
-
-/* Lead */
-.lead { font-size:19px; color:var(--gray-700); max-width:880px; line-height:1.65; margin-bottom:28px; }
-.lead strong { color:var(--gray-900); font-weight:700; }
-
-/* Signal cards (3-up) */
-.signal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
-.signal-card { background:#fff; border:1px solid var(--gray-200); border-left:4px solid var(--accent); border-radius:6px; padding:26px 28px; box-shadow:var(--shadow); }
-.signal-card .lbl { font-size:11.5px; color:var(--gray-500); text-transform:uppercase; letter-spacing:1.3px; font-weight:600; margin-bottom:10px; }
-.signal-card .num { font-size:38px; font-weight:800; color:var(--primary); letter-spacing:-1px; line-height:1.05; margin-bottom:6px; }
-.signal-card .desc { font-size:13.5px; color:var(--gray-700); }
-
-/* Takeaway cards (3-up) */
-.takeaway-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:30px; }
-.takeaway-card { background:#fff; border:1px solid var(--gray-200); border-radius:8px; padding:30px 28px; }
-.takeaway-card .num { font-size:13px; font-weight:800; color:var(--accent); letter-spacing:2px; margin-bottom:14px; }
-.takeaway-card h3 { font-size:19px; font-weight:800; color:var(--gray-900); margin-bottom:12px; letter-spacing:-.3px; }
-.takeaway-card p { font-size:14.5px; color:var(--gray-700); line-height:1.65; }
-
-/* Scenes — gallery 2x2 */
-.scenes-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
-.scene-card { background:#fff; border:1px solid var(--gray-200); border-radius:8px; overflow:hidden; box-shadow:var(--shadow); }
-.scene-card .img-wrap { aspect-ratio:16/10; background:var(--gray-100); overflow:hidden; }
-.scene-card .img-wrap img { width:100%; height:100%; object-fit:cover; }
-.scene-card .body { padding:20px 24px 24px; }
-.scene-card h3 { font-size:16px; font-weight:800; color:var(--primary); margin-bottom:6px; }
-.scene-card p { font-size:14px; color:var(--gray-700); line-height:1.6; }
-
-/* Top 5 products — vertical list with rank chip */
-.products { display:flex; flex-direction:column; gap:22px; }
-.product-card { background:#fff; border:1px solid var(--gray-200); border-radius:8px; overflow:hidden; display:grid; grid-template-columns:240px 1fr; gap:0; box-shadow:var(--shadow); transition:box-shadow .2s, border-color .2s; }
-.product-card:hover { box-shadow:var(--shadow-lg); border-color:var(--primary); }
-.product-card .img-wrap { background:var(--gray-100); aspect-ratio:1/1; overflow:hidden; position:relative; }
-.product-card .img-wrap img { width:100%; height:100%; object-fit:cover; }
-.product-card .rank-chip { position:absolute; top:14px; left:14px; background:var(--accent); color:#fff; padding:7px 14px; border-radius:4px; font-size:14px; font-weight:800; letter-spacing:.3px; box-shadow:0 2px 8px rgba(0,0,0,.18); }
-.product-card .body { padding:26px 30px; display:flex; flex-direction:column; }
-.product-card h3 { font-size:17px; font-weight:800; color:var(--gray-900); letter-spacing:-.2px; margin-bottom:14px; line-height:1.35; }
-.product-card .brand-row { display:flex; align-items:baseline; gap:14px; margin-bottom:18px; padding-bottom:16px; border-bottom:1px solid var(--gray-100); }
-.product-card .brand { font-size:13px; font-weight:700; color:var(--primary); }
-.product-card .markets { font-size:11.5px; color:var(--gray-500); text-transform:uppercase; letter-spacing:1px; font-weight:600; }
-.specs { display:grid; grid-template-columns:repeat(4,1fr); gap:18px 16px; margin-bottom:18px; }
-.spec .lbl { font-size:10.5px; color:var(--gray-500); text-transform:uppercase; letter-spacing:1px; font-weight:600; margin-bottom:3px; }
-.spec .val { font-size:14.5px; font-weight:700; color:var(--gray-900); }
-.spec .val.price { color:var(--accent); }
-.spec .val.heat { color:var(--primary); }
-.note { font-size:13px; color:var(--gray-700); line-height:1.55; background:var(--gray-50); border-left:3px solid var(--primary); padding:10px 14px; border-radius:3px; margin-bottom:14px; }
-.evidence { font-size:12px; color:var(--gray-500); font-style:italic; margin-bottom:12px; }
-.product-card .links { margin-top:auto; display:flex; gap:10px; flex-wrap:wrap; }
-.product-card .link-btn { font-size:12px; font-weight:700; color:#fff; background:var(--primary); padding:7px 14px; border-radius:4px; transition:background .15s; }
-.product-card .link-btn:hover { background:var(--primary-dk); }
-.product-card .link-btn.ca { background:#666; }
-.product-card .link-btn.ca:hover { background:#3b3b3b; }
-
-/* Methodology */
-.method-grid { display:grid; grid-template-columns:1fr 1fr; gap:30px; }
-.method-card { background:#fff; border:1px solid var(--gray-200); border-radius:8px; padding:26px 28px; }
-.method-card h3 { font-size:15.5px; font-weight:800; color:var(--gray-900); margin-bottom:14px; padding-bottom:10px; border-bottom:2px solid var(--accent); display:inline-block; }
-.method-card ul { list-style:none; }
-.method-card li { font-size:13.5px; color:var(--gray-700); padding:7px 0; padding-left:18px; position:relative; line-height:1.55; }
-.method-card li::before { content:"▸"; position:absolute; left:0; color:var(--accent); font-weight:700; }
-.method-card li.ex::before { content:"✕"; color:var(--gray-500); }
-
-/* Footer */
-.footer { background:var(--primary-dk); color:#cfe0f5; padding:36px 32px 28px; }
-.footer-inner { max-width:1280px; margin:0 auto; text-align:center; }
-.footer-inner .name { font-size:18px; font-weight:800; color:#fff; margin-bottom:6px; }
-.footer-inner .meta { font-size:12px; opacity:.7; }
-
-/* Responsive */
-@media (max-width:1024px) {
-  .signal-grid, .takeaway-grid, .method-grid { grid-template-columns:1fr; gap:16px; }
-  .scenes-grid { grid-template-columns:1fr; }
-  .product-card { grid-template-columns:1fr; }
-  .product-card .img-wrap { aspect-ratio:16/10; }
-  .specs { grid-template-columns:repeat(2,1fr); }
-  .hero { height:auto; min-height:380px; }
-  .hero h1 { font-size:30px; }
-  .hero p { font-size:15px; }
-  .section { padding:42px 22px; }
+html{ background:var(--gray-200); }
+body{
+  font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  color:var(--gray-900); line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  -webkit-print-color-adjust:exact; print-color-adjust:exact;
 }
-@media (max-width:560px) {
-  .header-inner { padding:14px 18px; gap:10px; }
-  .header-meta { display:none; }
-  .signal-card .num { font-size:32px; }
-  .product-card .body { padding:20px 22px; }
-  .specs { grid-template-columns:1fr 1fr; gap:14px 12px; }
+img{ display:block; max-width:100%; }
+
+/* ============ PAGE FRAME (Letter 816×1056 @96dpi) ============ */
+.page{
+  position:relative; width:816px; height:1056px; background:#fff; overflow:hidden;
+  padding:44px 50px 28px; display:flex; flex-direction:column;
+  margin:26px auto; box-shadow:var(--shadow-lg);
 }
+.page > .body{ flex:1; display:flex; flex-direction:column; min-height:0; overflow:hidden; }
 
-/* ===== Print / PDF — force desktop layout + page-break control ===== */
-/* Desktop-print overrides only. Mobile-print (viewport < 1025) falls through to mobile responsive (single column). */
-@media print and (min-width: 1025px) {
-  @page { size:letter; margin:0; }
-  body { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
-  .header { position:static; box-shadow:none; }
-  .section { padding:36px 32px; }
-  .hero { height:420px; }
-  .hero h1 { font-size:36px; }
+/* eyebrow (orange section tag + right note) */
+.eyebrow{ display:flex; justify-content:space-between; align-items:flex-start; gap:30px; margin-bottom:14px; }
+.eyebrow .tag{ font-size:11px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--accent); padding-top:3px; }
+.eyebrow .note{ font-size:11.5px; font-style:italic; color:var(--gray-500); text-align:right; max-width:320px; line-height:1.45; }
 
-  /* Force multi-column grids even on narrow print viewport */
-  .signal-grid { display:grid !important; grid-template-columns:repeat(3,1fr) !important; gap:16px !important; }
-  .takeaway-grid { display:grid !important; grid-template-columns:repeat(3,1fr) !important; gap:16px !important; }
-  .scenes-grid { display:grid !important; grid-template-columns:repeat(2,1fr) !important; gap:16px !important; }
-  .method-grid { display:grid !important; grid-template-columns:1fr 1fr !important; gap:20px !important; }
+.ptitle{ font-size:33px; font-weight:800; letter-spacing:-.8px; line-height:1.1; color:var(--gray-900); margin-bottom:6px; }
+.rule{ height:3px; width:54px; background:var(--accent); border-radius:2px; margin:12px 0 16px; }
+.lead{ font-size:15px; color:var(--gray-700); line-height:1.6; max-width:680px; }
+.lead strong{ color:var(--gray-900); font-weight:700; }
 
-  /* Force product card horizontal layout */
-  .product-card { display:grid !important; grid-template-columns:200px 1fr !important; box-shadow:none !important; border:1px solid var(--gray-300) !important; }
-  .product-card .img-wrap { aspect-ratio:1/1 !important; }
-  .product-card .body { padding:18px 22px !important; }
-  .product-card h3 { font-size:14px !important; margin-bottom:10px !important; }
-  .specs { grid-template-columns:repeat(4,1fr) !important; gap:10px 12px !important; margin-bottom:10px !important; }
-  .spec .val { font-size:12.5px !important; }
-  .spec .lbl { font-size:9.5px !important; }
-  .note { font-size:11px !important; padding:7px 10px !important; margin-bottom:8px !important; }
-  .evidence { font-size:10.5px !important; margin-bottom:8px !important; }
-  .product-card .link-btn { font-size:10.5px !important; padding:5px 11px !important; }
+/* page footer (in normal flow — never overlaps content) */
+.foot{ flex-shrink:0; display:flex; justify-content:space-between; align-items:center;
+  font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:var(--gray-400); border-top:1px solid var(--gray-200); padding-top:9px; margin-top:14px; }
+.foot .pg{ font-weight:800; color:var(--primary); letter-spacing:0; }
 
-  /* Scene card — slightly shorter */
-  .scene-card .img-wrap { aspect-ratio:16/11; }
-  .scene-card .body { padding:14px 18px; }
-  .scene-card h3 { font-size:14px; }
-  .scene-card p { font-size:12.5px; }
+/* ============ COVER ============ */
+.cover{ padding:0; color:#fff; }
+.cover .bg{ position:absolute; inset:0; }
+.cover .bg img{ width:100%; height:100%; object-fit:cover; }
+.cover .scrim{ position:absolute; inset:0; background:linear-gradient(105deg, rgba(15,38,71,.94) 0%, rgba(15,38,71,.80) 42%, rgba(15,38,71,.30) 100%); }
+.cover .inner{ position:relative; height:100%; display:flex; flex-direction:column; padding:54px 56px; }
+.cover .top{ display:flex; justify-content:space-between; align-items:flex-start; }
+.cover .brand .name{ font-size:24px; font-weight:900; letter-spacing:-.5px; }
+.cover .brand .sub{ font-size:11px; letter-spacing:2.5px; text-transform:uppercase; color:#a9c2e6; margin-top:2px; }
+.cover .meta{ text-align:right; font-size:12px; color:#cfe0f5; line-height:1.6; }
+.cover .meta strong{ color:#fff; font-weight:700; }
+.cover .mid{ margin-top:auto; }
+.cover .kicker{ display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:800; letter-spacing:2px; text-transform:uppercase; padding:7px 16px; border-radius:3px; margin-bottom:22px; }
+.cover h1{ font-size:54px; font-weight:900; letter-spacing:-1.6px; line-height:1.04; margin-bottom:20px; }
+.cover .desc{ font-size:16.5px; color:#e4edf9; max-width:520px; line-height:1.6; }
+.cover .chips{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:40px; }
+.cover .chip{ background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.18); border-radius:8px; padding:16px 16px; backdrop-filter:blur(2px); }
+.cover .chip .l{ font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:#a9c2e6; margin-bottom:8px; font-weight:700; }
+.cover .chip .v{ font-size:16px; font-weight:800; line-height:1.2; }
+.cover .foot-line{ margin-top:34px; display:flex; justify-content:space-between; font-size:11.5px; color:#a9c2e6; border-top:1px solid rgba(255,255,255,.16); padding-top:16px; }
 
-  /* Signal / Takeaway tighten */
-  .signal-card { padding:18px 20px; box-shadow:none; }
-  .signal-card .num { font-size:30px; }
-  .takeaway-card { padding:20px 22px; }
-  .takeaway-card h3 { font-size:16px; }
-  .takeaway-card p { font-size:13px; }
+/* ============ STAT CARDS (big numbers, optional sparkline) ============ */
+.stats{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:18px 0; }
+.stat{ background:var(--gray-50); border:1px solid var(--gray-200); border-top:3px solid var(--accent); border-radius:8px; padding:14px 15px 14px; display:flex; flex-direction:column; }
+.stat .l{ font-size:9.5px; letter-spacing:1.2px; text-transform:uppercase; color:var(--gray-500); font-weight:700; margin-bottom:10px; }
+.stat .n{ font-size:34px; font-weight:900; color:var(--primary); letter-spacing:-1.5px; line-height:1; margin-bottom:8px; }
+.stat .d{ font-size:11px; color:var(--gray-700); line-height:1.45; }
+.stat .spark{ margin-top:auto; padding-top:10px; }
 
-  /* Method card */
-  .method-card { padding:18px 20px; }
-  .method-card li { font-size:12px; padding:4px 0 4px 16px; }
+/* ============ 2x2 INSIGHT BOXES (text or bullet list) ============ */
+.boxes{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.box{ background:#fff; border:1px solid var(--gray-200); border-radius:8px; padding:14px 18px; }
+.box h3{ font-size:14.5px; font-weight:800; color:var(--primary); margin-bottom:8px; }
+.box p{ font-size:12.5px; color:var(--gray-700); line-height:1.55; }
+.box ul{ list-style:none; }
+.box li{ font-size:12.5px; color:var(--gray-700); line-height:1.45; padding-left:16px; position:relative; margin-bottom:4px; }
+.box li:last-child{ margin-bottom:0; }
+.box li::before{ content:""; position:absolute; left:0; top:7px; width:6px; height:6px; border-radius:50%; background:var(--accent); }
 
-  /* Avoid orphan card cuts */
-  .signal-card, .takeaway-card, .scene-card, .product-card, .method-card { page-break-inside:avoid; break-inside:avoid; }
-  .section-head { page-break-after:avoid; break-after:avoid; }
+/* ============ DARK CLOSING BANNER (sticks to page bottom) ============ */
+.banner{ background:var(--primary-dk); color:#fff; border-radius:10px; padding:17px 24px; margin-top:auto; }
+.banner h3{ font-size:16px; font-weight:800; letter-spacing:-.3px; margin-bottom:6px; line-height:1.25; }
+.banner p{ font-size:12px; color:#cfe0f5; line-height:1.5; }
+.banner .ic{ display:inline-block; width:26px; height:26px; border-radius:6px; background:var(--accent); color:#fff; text-align:center; line-height:26px; font-weight:900; margin-right:10px; vertical-align:-6px; }
 
-  /* Section heads slightly smaller */
-  .section-head h2 { font-size:24px; }
-  .section-head p { font-size:13.5px; }
-  .lead { font-size:15px; margin-bottom:18px; }
+/* ============ SUBHEAD (in-page divider label) ============ */
+.subhead{ font-size:11px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--gray-500); margin:15px 0 10px; display:flex; align-items:center; gap:10px; }
+.subhead::after{ content:""; flex:1; height:1px; background:var(--gray-200); }
+
+/* ============ IMAGE GALLERY (4-up) ============ */
+.gallery{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+.gcard{ border:1px solid var(--gray-200); border-radius:8px; overflow:hidden; background:#fff; }
+.gcard .im{ aspect-ratio:4/3; overflow:hidden; }
+.gcard .im img{ width:100%; height:100%; object-fit:cover; }
+.gcard .cap{ padding:9px 11px 11px; }
+.gcard .cap h4{ font-size:12px; font-weight:800; color:var(--primary); margin-bottom:3px; }
+.gcard .cap p{ font-size:10px; color:var(--gray-500); line-height:1.4; }
+
+/* ============ STEP / PATH ROWS (label → text) ============ */
+.path{ display:flex; flex-direction:column; gap:0; margin-top:6px; }
+.prow{ display:grid; grid-template-columns:170px 1fr; gap:18px; align-items:center; padding:10px 0; border-bottom:1px solid var(--gray-200); }
+.prow:last-child{ border-bottom:none; }
+.prow .step{ font-size:11.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--accent); }
+.prow .txt{ font-size:12.5px; color:var(--gray-700); line-height:1.5; }
+
+/* ============ COLOR SWATCHES ============ */
+.swatches{ display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-top:4px; }
+.sw{ text-align:center; }
+.sw .chip{ height:40px; border-radius:7px; border:1px solid rgba(0,0,0,.10); box-shadow:inset 0 -8px 14px rgba(0,0,0,.12); margin-bottom:6px; }
+.sw .nm{ font-size:11px; font-weight:700; color:var(--gray-700); }
+
+/* ============ CHECKLIST TABLE ============ */
+.tbl{ width:100%; border-collapse:collapse; border:1px solid var(--gray-200); border-radius:8px; overflow:hidden; }
+.tbl th{ background:var(--primary); color:#fff; font-size:10px; letter-spacing:1.2px; text-transform:uppercase; text-align:left; padding:8px 14px; font-weight:700; }
+.tbl td{ font-size:11.5px; color:var(--gray-700); padding:7px 14px; border-top:1px solid var(--gray-200); line-height:1.4; vertical-align:top; }
+.tbl tr:nth-child(even) td{ background:var(--gray-50); }
+.tbl td.area{ font-weight:800; color:var(--gray-900); white-space:nowrap; }
+.tbl td.pick{ font-weight:600; color:var(--primary); }
+
+/* ============ PRODUCT CARDS — strong card treatment (accent edge + tinted spec panel = card-in-card) ============ */
+.pcards{ display:flex; flex-direction:column; gap:13px; }
+.pcard{ display:grid; grid-template-columns:168px 1fr; border:1px solid var(--gray-300); border-left:4px solid var(--primary); border-radius:13px; overflow:hidden; background:#fff; }
+.pcard .im{ position:relative; background:var(--gray-100); border-right:1px solid var(--gray-200); }
+.pcard .im img{ width:100%; height:100%; object-fit:cover; }
+.pcard .rank{ position:absolute; top:11px; left:11px; background:var(--accent); color:#fff; font-size:15px; font-weight:900; padding:6px 13px; border-radius:7px; letter-spacing:.3px; }
+.pcard .pb{ padding:12px 18px; display:flex; flex-direction:column; }
+.pcard .ph{ display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:6px; }
+.pcard .pt{ font-size:14px; font-weight:800; color:var(--gray-900); line-height:1.3; }
+.pcard .mk{ font-size:8.5px; font-weight:800; letter-spacing:.8px; text-transform:uppercase; color:#fff; background:var(--primary); padding:4px 10px; border-radius:20px; white-space:nowrap; align-self:flex-start; }
+.pcard .brand{ font-size:11px; font-weight:800; letter-spacing:.8px; text-transform:uppercase; color:var(--accent); margin-bottom:9px; }
+.specs{ display:grid; grid-template-columns:repeat(4,1fr); gap:9px 12px; padding:10px 13px; background:var(--gray-50); border:1px solid var(--gray-200); border-radius:9px; }
+.sp .l{ font-size:9px; letter-spacing:.8px; text-transform:uppercase; color:var(--gray-500); font-weight:700; margin-bottom:2px; }
+.sp .v{ font-size:12.5px; font-weight:700; color:var(--gray-900); }
+.sp .v.price{ color:var(--accent); }
+.sp .v.heat{ color:var(--primary); }
+.sp .v.mono{ font-family:Consolas,monospace; font-size:11px; }
+.pcard .nt{ font-size:11px; color:var(--gray-700); line-height:1.4; margin-top:9px; }
+.pcard .src{ font-size:9.5px; font-style:italic; color:var(--gray-400); margin-top:6px; }
+
+/* ============ PATTERN MINI BOXES (3-up) ============ */
+.pat{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:2px; }
+.pat .b{ background:var(--gray-50); border:1px solid var(--gray-200); border-top:3px solid var(--accent); border-radius:8px; padding:16px 18px; }
+.pat .b h4{ font-size:13.5px; font-weight:800; color:var(--primary); margin-bottom:8px; }
+.pat .b p{ font-size:11.5px; color:var(--gray-700); line-height:1.55; }
+
+.priceband{ margin:8px 0 2px; }
+
+/* ============ NUMBERED CONVERSATION STEPS ============ */
+.conv{ display:flex; flex-direction:column; gap:0; }
+.crow{ display:grid; grid-template-columns:36px 150px 1fr; gap:14px; align-items:start; padding:8px 0; border-bottom:1px solid var(--gray-200); }
+.crow:last-child{ border-bottom:none; }
+.crow .no{ width:28px; height:28px; border-radius:50%; background:var(--accent); color:#fff; font-size:13px; font-weight:800; text-align:center; line-height:28px; }
+.crow .k{ font-size:11.5px; font-weight:800; letter-spacing:.8px; text-transform:uppercase; color:var(--primary); line-height:1.3; padding-top:5px; }
+.crow .t{ font-size:12px; color:var(--gray-700); line-height:1.5; padding-top:4px; }
+
+/* ============ METHODOLOGY (2-col + sources + disclaimer) ============ */
+.method{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.mcol{ background:var(--gray-50); border:1px solid var(--gray-200); border-radius:8px; padding:18px 20px; }
+.mcol h3{ font-size:13px; font-weight:800; color:var(--gray-900); padding-bottom:8px; border-bottom:2px solid var(--accent); display:inline-block; margin-bottom:12px; }
+.mcol li{ list-style:none; font-size:11.5px; color:var(--gray-700); line-height:1.5; padding-left:18px; position:relative; margin-bottom:8px; }
+.mcol li::before{ content:"▸"; position:absolute; left:0; color:var(--accent); font-weight:800; }
+.mcol li.ex::before{ content:"✕"; color:var(--gray-400); }
+.sources{ display:grid; grid-template-columns:1fr 1fr; gap:8px 18px; margin-top:6px; }
+.src-row{ display:grid; grid-template-columns:22px 1fr; gap:10px; align-items:start; }
+.src-row .n{ width:20px; height:20px; border-radius:50%; background:var(--primary); color:#fff; font-size:10.5px; font-weight:800; text-align:center; line-height:20px; }
+.src-row .x{ font-size:10.5px; color:var(--gray-700); line-height:1.45; }
+.src-row .x b{ color:var(--gray-900); }
+.disc{ font-size:9.5px; color:var(--gray-500); line-height:1.5; margin-top:auto; border-top:1px solid var(--gray-200); padding-top:12px; }
+
+/* ============ PRINT ============ */
+@media print{
+  @page{ size:8.5in 11in; margin:0; }   /* A4: size:A4 */
+  html,body{ background:#fff; margin:0; }
+  .page{ margin:0; box-shadow:none; page-break-after:always; break-after:page; }
+  .page:last-child{ page-break-after:avoid; break-after:auto; }
 }
 </style>
 </head>
 <body>
 
-<!-- ====================================================================
-INTCO Decor Report — Template
-Replace {{PLACEHOLDER}} tokens with real content.
-Each section block (signal / takeaway / scene / product) can be repeated
-or deleted as needed. Comments mark each section.
-==================================================================== -->
+<!-- ============================================================================
+HOW TO USE
+- Each <section class="page"> is one printed page. Add / remove pages freely.
+- A content page = .eyebrow (section tag + note) → .ptitle → .rule → content blocks → optional .banner → .foot.
+- Mix-and-match the content blocks below (stats / boxes / gallery / table / product cards / charts / steps).
+- Put a .banner LAST inside .body to anchor a conclusion to the page bottom and absorb leftover whitespace.
+- Keep adjacent pages visually DIFFERENT (don't stack four identical 2×2-box pages in a row).
+- Replace every {{TOKEN}}. Delete blocks you don't use. Repeat .pcard / .gcard / rows as needed.
+- After exporting, READ each PDF page and check: no clipped text, no banner over footer, no lost rows.
+============================================================================ -->
 
-<div class="top-strip"><strong>{{TOP_STRIP_LABEL}}</strong> &nbsp;·&nbsp; {{TOP_STRIP_META_1}} &nbsp;·&nbsp; {{TOP_STRIP_META_2}} &nbsp;·&nbsp; {{REPORT_DATE}}</div>
-
-<header class="header">
-  <div class="header-inner">
-    <div class="logo">
-      <div class="name">INTCO Decor</div>
-      <div class="tag">{{LOGO_TAG}}</div>
+<!-- ============================ PAGE — COVER ============================ -->
+<section class="page cover">
+  <div class="bg"><img src="images/scenes/{{HERO_IMAGE}}" alt="{{HERO_ALT}}" /></div>
+  <div class="scrim"></div>
+  <div class="inner">
+    <div class="top">
+      <div class="brand"><div class="name">INTCO Decor</div><div class="sub">{{BRAND_SUBLINE}}</div></div>
+      <div class="meta"><div><strong>{{COVER_META_TOP}}</strong></div><div>{{COVER_META_SUB}}</div></div>
     </div>
-    <div class="header-meta">
-      <div><strong>{{HEADER_META_TITLE}}</strong></div>
-      <div>{{HEADER_META_SUBTITLE}}</div>
-    </div>
-  </div>
-</header>
-
-<!-- ============ HERO (full-width banner + overlay) — keep ============ -->
-<section class="hero">
-  <img src="images/scenes/{{HERO_IMAGE}}" alt="{{HERO_ALT}}" />
-  <div class="hero-overlay">
-    <div class="hero-overlay-inner">
-      <div class="hero-tag">{{HERO_SMALL_TAG}}</div>
-      <h1>{{HERO_TITLE_LINE_1}}<br/>{{HERO_TITLE_LINE_2}}</h1>
-      <p>{{HERO_LEAD_PARAGRAPH}}</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SIGNAL CARDS (3 big-number cards in a row) — optional ============ -->
-<section class="section">
-  <div class="section-inner">
-    <div class="section-head">
-      <h2>{{SIGNAL_SECTION_TITLE}}</h2>
-      <p>{{SIGNAL_SECTION_SUBTITLE}}</p>
-    </div>
-    <div class="signal-grid">
-      <!-- Repeat .signal-card 1-3 times. Recommended: exactly 3 cards. -->
-      <div class="signal-card">
-        <div class="lbl">{{SIGNAL_1_LABEL}}</div>
-        <div class="num">{{SIGNAL_1_NUMBER}}<span style="font-size:18px;color:var(--gray-500);font-weight:600">{{SIGNAL_1_UNIT}}</span></div>
-        <div class="desc">{{SIGNAL_1_DESC}}</div>
+    <div class="mid">
+      <span class="kicker">{{COVER_KICKER}}</span>
+      <h1>{{COVER_TITLE_L1}}<br/>{{COVER_TITLE_L2}}</h1>
+      <p class="desc">{{COVER_SUBTITLE}}</p>
+      <div class="chips">
+        <!-- 4 meta chips (delete/add freely) -->
+        <div class="chip"><div class="l">{{CHIP_1_L}}</div><div class="v">{{CHIP_1_V}}</div></div>
+        <div class="chip"><div class="l">{{CHIP_2_L}}</div><div class="v">{{CHIP_2_V}}</div></div>
+        <div class="chip"><div class="l">{{CHIP_3_L}}</div><div class="v">{{CHIP_3_V}}</div></div>
+        <div class="chip"><div class="l">{{CHIP_4_L}}</div><div class="v">{{CHIP_4_V}}</div></div>
       </div>
-      <div class="signal-card">
-        <div class="lbl">{{SIGNAL_2_LABEL}}</div>
-        <div class="num">{{SIGNAL_2_NUMBER}}<span style="font-size:18px;color:var(--gray-500);font-weight:600">{{SIGNAL_2_UNIT}}</span></div>
-        <div class="desc">{{SIGNAL_2_DESC}}</div>
-      </div>
-      <div class="signal-card">
-        <div class="lbl">{{SIGNAL_3_LABEL}}</div>
-        <div class="num">{{SIGNAL_3_NUMBER}}</div>
-        <div class="desc">{{SIGNAL_3_DESC}}</div>
-      </div>
+      <div class="foot-line"><span>{{COVER_FOOT_LEFT}}</span><span>{{COVER_FOOT_RIGHT}}</span></div>
     </div>
   </div>
 </section>
 
-<!-- ============ TAKEAWAYS (lead + 3 numbered cards) — optional ============ -->
-<section class="section alt">
-  <div class="section-inner">
-    <div class="section-head">
-      <h2>{{TAKEAWAY_SECTION_TITLE}}</h2>
-      <p>{{TAKEAWAY_SECTION_SUBTITLE}}</p>
-    </div>
-    <p class="lead">{{TAKEAWAY_LEAD_PARAGRAPH_WITH_STRONG_HIGHLIGHTS}}</p>
-    <div class="takeaway-grid">
-      <!-- Repeat .takeaway-card 2-4 times. Recommended: exactly 3. -->
-      <div class="takeaway-card">
-        <div class="num">01 / {{TAKEAWAY_1_KICKER}}</div>
-        <h3>{{TAKEAWAY_1_TITLE}}</h3>
-        <p>{{TAKEAWAY_1_BODY}}</p>
-      </div>
-      <div class="takeaway-card">
-        <div class="num">02 / {{TAKEAWAY_2_KICKER}}</div>
-        <h3>{{TAKEAWAY_2_TITLE}}</h3>
-        <p>{{TAKEAWAY_2_BODY}}</p>
-      </div>
-      <div class="takeaway-card">
-        <div class="num">03 / {{TAKEAWAY_3_KICKER}}</div>
-        <h3>{{TAKEAWAY_3_TITLE}}</h3>
-        <p>{{TAKEAWAY_3_BODY}}</p>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- ============================ PAGE — STATS + INSIGHT BOXES + BANNER ============================ -->
+<section class="page">
+  <div class="body">
+    <div class="eyebrow"><div class="tag">{{SECTION_TAG}}</div><div class="note">{{SECTION_NOTE}}</div></div>
+    <h1 class="ptitle">{{PAGE_TITLE}}</h1>
+    <div class="rule"></div>
+    <p class="lead">{{LEAD_PARAGRAPH}}</p>
 
-<!-- ============ SCENES GALLERY (2x2 cards with image + title + desc) — optional ============ -->
-<section class="section">
-  <div class="section-inner">
-    <div class="section-head">
-      <h2>{{SCENES_SECTION_TITLE}}</h2>
-      <p>{{SCENES_SECTION_SUBTITLE}}</p>
-    </div>
-    <div class="scenes-grid">
-      <!-- Repeat .scene-card 2-6 times. Recommended: exactly 4 (2x2). -->
-      <div class="scene-card">
-        <div class="img-wrap"><img src="images/scenes/{{SCENE_1_IMAGE}}" alt="{{SCENE_1_ALT}}" /></div>
-        <div class="body"><h3>{{SCENE_1_TITLE}}</h3><p>{{SCENE_1_DESC}}</p></div>
-      </div>
-      <div class="scene-card">
-        <div class="img-wrap"><img src="images/scenes/{{SCENE_2_IMAGE}}" alt="{{SCENE_2_ALT}}" /></div>
-        <div class="body"><h3>{{SCENE_2_TITLE}}</h3><p>{{SCENE_2_DESC}}</p></div>
-      </div>
-      <div class="scene-card">
-        <div class="img-wrap"><img src="images/scenes/{{SCENE_3_IMAGE}}" alt="{{SCENE_3_ALT}}" /></div>
-        <div class="body"><h3>{{SCENE_3_TITLE}}</h3><p>{{SCENE_3_DESC}}</p></div>
-      </div>
-      <div class="scene-card">
-        <div class="img-wrap"><img src="images/scenes/{{SCENE_4_IMAGE}}" alt="{{SCENE_4_ALT}}" /></div>
-        <div class="body"><h3>{{SCENE_4_TITLE}}</h3><p>{{SCENE_4_DESC}}</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TOP N PRODUCTS (vertical list of horizontal cards) — optional ============ -->
-<section class="section alt">
-  <div class="section-inner">
-    <div class="section-head">
-      <h2>{{PRODUCTS_SECTION_TITLE}}</h2>
-      <p>{{PRODUCTS_SECTION_SUBTITLE}}</p>
-    </div>
-    <div class="products">
-
-      <!-- Repeat the .product-card block N times (typically 3-10). Update rank #N each time. -->
-      <article class="product-card">
-        <div class="img-wrap">
-          <span class="rank-chip">#{{PRODUCT_RANK}}</span>
-          <img src="images/products/{{PRODUCT_IMAGE}}" alt="{{PRODUCT_ALT}}" />
+    <!-- BLOCK: stat cards (4-up). Last card shows an optional sparkline (delete .spark if not needed). -->
+    <div class="stats">
+      <div class="stat"><div class="l">{{STAT_1_L}}</div><div class="n">{{STAT_1_N}}</div><div class="d">{{STAT_1_D}}</div></div>
+      <div class="stat"><div class="l">{{STAT_2_L}}</div><div class="n">{{STAT_2_N}}</div><div class="d">{{STAT_2_D}}</div></div>
+      <div class="stat"><div class="l">{{STAT_3_L}}</div><div class="n">{{STAT_3_N}}</div><div class="d">{{STAT_3_D}}</div></div>
+      <div class="stat">
+        <div class="l">{{STAT_4_L}}</div><div class="n">{{STAT_4_N}}</div><div class="d">{{STAT_4_D}}</div>
+        <!-- BLOCK: growth bar chart (visualize EXISTING numbers only — never invent figures). -->
+        <div class="spark">
+          <svg viewBox="0 0 150 54" width="100%" height="46" preserveAspectRatio="none">
+            <line x1="6" y1="48" x2="144" y2="48" stroke="#dee2e6" stroke-width="1"/>
+            <rect x="26" y="30" width="34" height="18" rx="2" fill="#9db4d4"/>
+            <rect x="92" y="10" width="34" height="38" rx="2" fill="#1a3d6e"/>
+            <text x="43" y="26" font-size="9" font-weight="700" fill="#6c757d" text-anchor="middle">{{BAR_1_VAL}}</text>
+            <text x="109" y="6.5" font-size="9" font-weight="800" fill="#1a3d6e" text-anchor="middle">{{BAR_2_VAL}}</text>
+            <text x="43" y="53.5" font-size="7.5" fill="#6c757d" text-anchor="middle">{{BAR_1_LBL}}</text>
+            <text x="109" y="53.5" font-size="7.5" fill="#6c757d" text-anchor="middle">{{BAR_2_LBL}}</text>
+          </svg>
         </div>
-        <div class="body">
-          <h3>{{PRODUCT_TITLE}}</h3>
-          <div class="brand-row">
-            <span class="brand">{{PRODUCT_BRAND}}</span>
-            <span class="markets">{{PRODUCT_MARKET_LABEL}}</span>
-          </div>
+      </div>
+    </div>
+
+    <!-- BLOCK: 2x2 insight boxes (text variant) -->
+    <div class="boxes">
+      <div class="box"><h3>{{BOX_1_H}}</h3><p>{{BOX_1_P}}</p></div>
+      <div class="box"><h3>{{BOX_2_H}}</h3><p>{{BOX_2_P}}</p></div>
+      <div class="box"><h3>{{BOX_3_H}}</h3><p>{{BOX_3_P}}</p></div>
+      <div class="box"><h3>{{BOX_4_H}}</h3><p>{{BOX_4_P}}</p></div>
+    </div>
+
+    <div class="banner">
+      <h3><span class="ic">!</span>{{BANNER_TITLE}}</h3>
+      <p>{{BANNER_BODY}}</p>
+    </div>
+  </div>
+  <div class="foot"><span>{{FOOT_LABEL}}</span><span class="pg">{{PAGE_NO}}</span></div>
+</section>
+
+<!-- ============================ PAGE — BOXES + IMAGE GALLERY + PATH ============================ -->
+<section class="page">
+  <div class="body">
+    <div class="eyebrow"><div class="tag">{{SECTION_TAG}}</div><div class="note">{{SECTION_NOTE}}</div></div>
+    <h1 class="ptitle">{{PAGE_TITLE}}</h1>
+    <div class="rule"></div>
+
+    <!-- BLOCK: 2x2 insight boxes -->
+    <div class="boxes">
+      <div class="box"><h3>{{BOX_1_H}}</h3><p>{{BOX_1_P}}</p></div>
+      <div class="box"><h3>{{BOX_2_H}}</h3><p>{{BOX_2_P}}</p></div>
+      <div class="box"><h3>{{BOX_3_H}}</h3><p>{{BOX_3_P}}</p></div>
+      <div class="box"><h3>{{BOX_4_H}}</h3><p>{{BOX_4_P}}</p></div>
+    </div>
+
+    <!-- BLOCK: image gallery (4-up). Repeat/cut .gcard as needed. -->
+    <div class="subhead">{{GALLERY_SUBHEAD}}</div>
+    <div class="gallery">
+      <div class="gcard"><div class="im"><img src="images/scenes/{{G1_IMG}}" alt="{{G1_ALT}}"/></div><div class="cap"><h4>{{G1_H}}</h4><p>{{G1_P}}</p></div></div>
+      <div class="gcard"><div class="im"><img src="images/scenes/{{G2_IMG}}" alt="{{G2_ALT}}"/></div><div class="cap"><h4>{{G2_H}}</h4><p>{{G2_P}}</p></div></div>
+      <div class="gcard"><div class="im"><img src="images/scenes/{{G3_IMG}}" alt="{{G3_ALT}}"/></div><div class="cap"><h4>{{G3_H}}</h4><p>{{G3_P}}</p></div></div>
+      <div class="gcard"><div class="im"><img src="images/scenes/{{G4_IMG}}" alt="{{G4_ALT}}"/></div><div class="cap"><h4>{{G4_H}}</h4><p>{{G4_P}}</p></div></div>
+    </div>
+
+    <!-- BLOCK: path / step rows -->
+    <div class="subhead">{{PATH_SUBHEAD}}</div>
+    <div class="path">
+      <div class="prow"><div class="step">{{PATH_1_STEP}}</div><div class="txt">{{PATH_1_TXT}}</div></div>
+      <div class="prow"><div class="step">{{PATH_2_STEP}}</div><div class="txt">{{PATH_2_TXT}}</div></div>
+      <div class="prow"><div class="step">{{PATH_3_STEP}}</div><div class="txt">{{PATH_3_TXT}}</div></div>
+    </div>
+  </div>
+  <div class="foot"><span>{{FOOT_LABEL}}</span><span class="pg">{{PAGE_NO}}</span></div>
+</section>
+
+<!-- ============================ PAGE — BULLET BOXES + SWATCHES + TABLE + BANNER ============================ -->
+<section class="page">
+  <div class="body">
+    <div class="eyebrow"><div class="tag">{{SECTION_TAG}}</div><div class="note">{{SECTION_NOTE}}</div></div>
+    <h1 class="ptitle">{{PAGE_TITLE}}</h1>
+    <div class="rule"></div>
+
+    <!-- BLOCK: 2x2 boxes, bullet-list variant -->
+    <div class="boxes">
+      <div class="box"><h3>{{BOX_1_H}}</h3><ul><li>{{BOX_1_LI_1}}</li><li>{{BOX_1_LI_2}}</li><li>{{BOX_1_LI_3}}</li></ul></div>
+      <div class="box"><h3>{{BOX_2_H}}</h3><ul><li>{{BOX_2_LI_1}}</li><li>{{BOX_2_LI_2}}</li><li>{{BOX_2_LI_3}}</li></ul></div>
+      <div class="box"><h3>{{BOX_3_H}}</h3><ul><li>{{BOX_3_LI_1}}</li><li>{{BOX_3_LI_2}}</li><li>{{BOX_3_LI_3}}</li></ul></div>
+      <div class="box"><h3>{{BOX_4_H}}</h3><ul><li>{{BOX_4_LI_1}}</li><li>{{BOX_4_LI_2}}</li><li>{{BOX_4_LI_3}}</li></ul></div>
+    </div>
+
+    <!-- BLOCK: color swatches (5). Use real hex for the finish/color names you already have. -->
+    <div class="subhead">{{SWATCH_SUBHEAD}}</div>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:{{SW1_HEX}}"></div><div class="nm">{{SW1_NM}}</div></div>
+      <div class="sw"><div class="chip" style="background:{{SW2_HEX}}"></div><div class="nm">{{SW2_NM}}</div></div>
+      <div class="sw"><div class="chip" style="background:{{SW3_HEX}}"></div><div class="nm">{{SW3_NM}}</div></div>
+      <div class="sw"><div class="chip" style="background:{{SW4_HEX}}"></div><div class="nm">{{SW4_NM}}</div></div>
+      <div class="sw"><div class="chip" style="background:{{SW5_HEX}}"></div><div class="nm">{{SW5_NM}}</div></div>
+    </div>
+
+    <!-- BLOCK: checklist table. Repeat <tr> as needed. -->
+    <div class="subhead">{{TABLE_SUBHEAD}}</div>
+    <table class="tbl">
+      <thead><tr><th style="width:130px">{{TH_1}}</th><th style="width:230px">{{TH_2}}</th><th>{{TH_3}}</th></tr></thead>
+      <tbody>
+        <tr><td class="area">{{R1_C1}}</td><td class="pick">{{R1_C2}}</td><td>{{R1_C3}}</td></tr>
+        <tr><td class="area">{{R2_C1}}</td><td class="pick">{{R2_C2}}</td><td>{{R2_C3}}</td></tr>
+        <tr><td class="area">{{R3_C1}}</td><td class="pick">{{R3_C2}}</td><td>{{R3_C3}}</td></tr>
+        <tr><td class="area">{{R4_C1}}</td><td class="pick">{{R4_C2}}</td><td>{{R4_C3}}</td></tr>
+        <tr><td class="area">{{R5_C1}}</td><td class="pick">{{R5_C2}}</td><td>{{R5_C3}}</td></tr>
+      </tbody>
+    </table>
+
+    <div class="banner"><h3><span class="ic">✦</span>{{BANNER_TITLE}}</h3><p>{{BANNER_BODY}}</p></div>
+  </div>
+  <div class="foot"><span>{{FOOT_LABEL}}</span><span class="pg">{{PAGE_NO}}</span></div>
+</section>
+
+<!-- ============================ PAGE — PRODUCT CARDS ============================ -->
+<section class="page">
+  <div class="body">
+    <div class="eyebrow"><div class="tag">{{SECTION_TAG}}</div><div class="note">{{SECTION_NOTE}}</div></div>
+    <h1 class="ptitle">{{PAGE_TITLE}}</h1>
+    <div class="rule"></div>
+
+    <!-- BLOCK: product card. Repeat 2-3 per page (more than 3 will overflow — split to another page). -->
+    <div class="pcards">
+      <article class="pcard">
+        <div class="im"><span class="rank">#{{RANK}}</span><img src="images/products/{{P_IMG}}" alt="{{P_ALT}}"/></div>
+        <div class="pb">
+          <div class="ph"><div class="pt">{{P_TITLE}}</div><div class="mk">{{P_MARKET}}</div></div>
+          <div class="brand">{{P_BRAND}}</div>
           <div class="specs">
-            <!-- 4-column grid of spec cells. Add/remove .spec divs as needed (target: even count). -->
-            <div class="spec"><div class="lbl">{{SPEC_1_LBL}}</div><div class="val">{{SPEC_1_VAL}}</div></div>
-            <div class="spec"><div class="lbl">{{SPEC_2_LBL}}</div><div class="val price">{{SPEC_2_VAL}}</div></div>
-            <div class="spec"><div class="lbl">{{SPEC_3_LBL}}</div><div class="val heat">{{SPEC_3_VAL}}</div></div>
-            <div class="spec"><div class="lbl">{{SPEC_4_LBL}}</div><div class="val">{{SPEC_4_VAL}}</div></div>
-            <div class="spec"><div class="lbl">{{SPEC_5_LBL}}</div><div class="val">{{SPEC_5_VAL}}</div></div>
-            <div class="spec"><div class="lbl">{{SPEC_6_LBL}}</div><div class="val">{{SPEC_6_VAL}}</div></div>
-            <div class="spec"><div class="lbl">{{SPEC_7_LBL}}</div><div class="val">{{SPEC_7_VAL}}</div></div>
-            <div class="spec"><div class="lbl">{{SPEC_8_LBL}}</div><div class="val" style="font-family:Consolas,monospace;font-size:12.5px">{{SPEC_8_VAL}}</div></div>
+            <div class="sp"><div class="l">{{SPEC_1_L}}</div><div class="v price">{{SPEC_1_V}}</div></div>
+            <div class="sp"><div class="l">{{SPEC_2_L}}</div><div class="v heat">{{SPEC_2_V}}</div></div>
+            <div class="sp"><div class="l">{{SPEC_3_L}}</div><div class="v">{{SPEC_3_V}}</div></div>
+            <div class="sp"><div class="l">{{SPEC_4_L}}</div><div class="v">{{SPEC_4_V}}</div></div>
+            <div class="sp"><div class="l">{{SPEC_5_L}}</div><div class="v">{{SPEC_5_V}}</div></div>
+            <div class="sp"><div class="l">{{SPEC_6_L}}</div><div class="v">{{SPEC_6_V}}</div></div>
+            <div class="sp"><div class="l">{{SPEC_7_L}}</div><div class="v">{{SPEC_7_V}}</div></div>
+            <div class="sp"><div class="l">{{SPEC_8_L}}</div><div class="v mono">{{SPEC_8_V}}</div></div>
           </div>
-          <div class="note">{{PRODUCT_NOTE}}</div>
-          <div class="evidence">{{PRODUCT_EVIDENCE_LINE}}</div>
-          <div class="links">
-            <a href="{{PRODUCT_LINK_PRIMARY_URL}}" target="_blank" class="link-btn">{{PRODUCT_LINK_PRIMARY_LABEL}} ›</a>
-            <!-- Optional secondary link (e.g. Canada). Use class="link-btn ca" for the gray styling. -->
-            <a href="{{PRODUCT_LINK_SECONDARY_URL}}" target="_blank" class="link-btn ca">{{PRODUCT_LINK_SECONDARY_LABEL}} ›</a>
-          </div>
+          <div class="nt">{{P_NOTE}}</div>
+          <div class="src">{{P_SOURCE}}</div>
         </div>
       </article>
-
+      <!-- duplicate the <article> above for each additional product -->
     </div>
   </div>
+  <div class="foot"><span>{{FOOT_LABEL}}</span><span class="pg">{{PAGE_NO}}</span></div>
 </section>
 
-<!-- ============ METHODOLOGY (2 columns, included ▸ + excluded ✕) — optional ============ -->
-<section class="section">
-  <div class="section-inner">
-    <div class="section-head">
-      <h2>{{METHOD_SECTION_TITLE}}</h2>
-      <p>{{METHOD_SECTION_SUBTITLE}}</p>
+<!-- ============================ PAGE — PRODUCT CARDS + PRICE BAND + PATTERN + BANNER ============================ -->
+<!-- 默认 = 2 张卡 + 3 洞察盒 + 横幅（松而不空，已验证）。价格带图默认注释掉（加上会挤）。
+     若是 3 张卡 / 内容更多 → 拆两页（卡一页；洞察盒+横幅一页，洞察盒用 flex 居中填空）。别硬压。
+     改完务必读这页 PDF：横幅最后一行没被裁、底部不溢出。 -->
+<section class="page">
+  <div class="body">
+    <div class="eyebrow"><div class="tag">{{SECTION_TAG}}</div><div class="note">{{SECTION_NOTE}}</div></div>
+    <h1 class="ptitle">{{PAGE_TITLE}}</h1>
+    <div class="rule"></div>
+
+    <div class="pcards">
+      <article class="pcard">
+        <div class="im"><span class="rank">#{{RANK}}</span><img src="images/products/{{P_IMG}}" alt="{{P_ALT}}"/></div>
+        <div class="pb">
+          <div class="ph"><div class="pt">{{P_TITLE}}</div><div class="mk">{{P_MARKET}}</div></div>
+          <div class="brand">{{P_BRAND}}</div>
+          <div class="specs">
+            <div class="sp"><div class="l">{{SPEC_1_L}}</div><div class="v price">{{SPEC_1_V}}</div></div>
+            <div class="sp"><div class="l">{{SPEC_2_L}}</div><div class="v">{{SPEC_2_V}}</div></div>
+            <div class="sp"><div class="l">{{SPEC_3_L}}</div><div class="v">{{SPEC_3_V}}</div></div>
+            <div class="sp"><div class="l">{{SPEC_4_L}}</div><div class="v">{{SPEC_4_V}}</div></div>
+            <div class="sp"><div class="l">{{SPEC_5_L}}</div><div class="v">{{SPEC_5_V}}</div></div>
+            <div class="sp"><div class="l">{{SPEC_6_L}}</div><div class="v">{{SPEC_6_V}}</div></div>
+            <div class="sp"><div class="l">{{SPEC_7_L}}</div><div class="v">{{SPEC_7_V}}</div></div>
+            <div class="sp"><div class="l">{{SPEC_8_L}}</div><div class="v mono">{{SPEC_8_V}}</div></div>
+          </div>
+          <div class="nt">{{P_NOTE}}</div>
+          <div class="src">{{P_SOURCE}}</div>
+        </div>
+      </article>
+      <!-- duplicate the <article> above for the 2nd product (max 2 on this combined page) -->
     </div>
-    <div class="method-grid">
-      <div class="method-card">
-        <h3>{{METHOD_LEFT_TITLE}}</h3>
-        <ul>
-          <!-- ▸ = included (default). Add class="ex" → ✕ excluded. -->
-          <li>{{METHOD_LEFT_ITEM_1}}</li>
-          <li class="ex">{{METHOD_LEFT_EXCLUDED_1}}</li>
-          <li class="ex">{{METHOD_LEFT_EXCLUDED_2}}</li>
-        </ul>
-      </div>
-      <div class="method-card">
-        <h3>{{METHOD_RIGHT_TITLE}}</h3>
-        <ul>
-          <li>{{METHOD_RIGHT_ITEM_1}}</li>
-          <li>{{METHOD_RIGHT_ITEM_2}}</li>
-          <li>Source stack: <strong>{{METHOD_SOURCE_STACK}}</strong></li>
-          <li>Snapshot date: <strong>{{REPORT_DATE}}</strong></li>
-        </ul>
-      </div>
+
+    <!-- OPTIONAL BLOCK: price-band chart（可视化【已有】价格区间）。默认不启用——加上它本页会变挤。
+         要用就取消下面注释，并相应【少放一个洞察盒】或【拆成两页】，否则横幅会被裁。 -->
+    <!--
+    <div class="subhead">{{PRICEBAND_SUBHEAD}}</div>
+    <div class="priceband">
+      <svg viewBox="0 0 700 70" width="100%" height="38">
+        <defs><linearGradient id="pb" x1="0" x2="1"><stop offset="0" stop-color="#e85a2e" stop-opacity=".25"/><stop offset="1" stop-color="#1a3d6e" stop-opacity=".30"/></linearGradient></defs>
+        <rect x="20" y="26" width="660" height="12" rx="6" fill="url(#pb)"/>
+        <line x1="20" y1="44" x2="20" y2="50" stroke="#adb5bd"/><text x="20" y="62" font-size="11" fill="#6c757d" text-anchor="middle">{{PB_TICK_1}}</text>
+        <line x1="240" y1="44" x2="240" y2="50" stroke="#adb5bd"/><text x="240" y="62" font-size="11" fill="#6c757d" text-anchor="middle">{{PB_TICK_2}}</text>
+        <line x1="450" y1="44" x2="450" y2="50" stroke="#adb5bd"/><text x="450" y="62" font-size="11" fill="#6c757d" text-anchor="middle">{{PB_TICK_3}}</text>
+        <line x1="680" y1="44" x2="680" y2="50" stroke="#adb5bd"/><text x="680" y="62" font-size="11" fill="#6c757d" text-anchor="middle">{{PB_TICK_4}}</text>
+        <text x="130" y="18" font-size="11" font-weight="700" fill="#e85a2e" text-anchor="middle">{{PB_ZONE_1}}</text>
+        <text x="500" y="18" font-size="11" font-weight="700" fill="#1a3d6e" text-anchor="middle">{{PB_ZONE_2}}</text>
+      </svg>
     </div>
+    -->
+
+    <!-- BLOCK: 3-up pattern mini boxes (orange-top accent, matches the stat-card look) -->
+    <div class="subhead">{{PATTERN_SUBHEAD}}</div>
+    <div class="pat">
+      <div class="b"><h4>{{PAT_1_H}}</h4><p>{{PAT_1_P}}</p></div>
+      <div class="b"><h4>{{PAT_2_H}}</h4><p>{{PAT_2_P}}</p></div>
+      <div class="b"><h4>{{PAT_3_H}}</h4><p>{{PAT_3_P}}</p></div>
+    </div>
+
+    <div class="banner"><h3><span class="ic">→</span>{{BANNER_TITLE}}</h3><p>{{BANNER_BODY}}</p></div>
   </div>
+  <div class="foot"><span>{{FOOT_LABEL}}</span><span class="pg">{{PAGE_NO}}</span></div>
 </section>
 
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="name">INTCO Decor — {{FOOTER_SUBTITLE}}</div>
-    <div class="meta">{{FOOTER_META_LINE}}</div>
-  </div>
-</footer>
+<!-- ============================ PAGE — BULLET BOXES + NUMBERED STEPS + BANNER ============================ -->
+<section class="page">
+  <div class="body">
+    <div class="eyebrow"><div class="tag">{{SECTION_TAG}}</div><div class="note">{{SECTION_NOTE}}</div></div>
+    <h1 class="ptitle">{{PAGE_TITLE}}</h1>
+    <div class="rule"></div>
 
-<script>
-  // Single-page PDF mode: measure last-content bottom and inject @page size so the printed PDF
-  // is ONE giant page sized exactly to the content (no pagination, no trailing whitespace).
-  //
-  // DEFAULTS TO MOBILE (414px wide) — best for sharing via WeChat / email, viewed on phones/tablets.
-  // For a desktop-width PDF: change `w` to 1280 here AND change Chrome cmd to --window-size=1280,800.
-  //
-  // CRITICAL: Chrome must be launched with --window-size matching `w` here (e.g. 414,800 for mobile).
-  // Otherwise measured height is wrong (DOM measurement viewport ≠ @page width → reflow differs).
-  //
-  // BUFFER (+200px): print-time reflow can add ~50-150px vs JS measurement (font fallback / image
-  // late-layout). +200 buffer keeps content on one page; cost is a small white strip at the bottom.
-  window.addEventListener('load', () => {
-    requestAnimationFrame(() => {
-      document.documentElement.style.margin = '0';
-      document.body.style.margin = '0';
-      const last = document.querySelector('footer.footer')
-                || [...document.querySelectorAll('section, footer')].pop()
-                || document.body;
-      const h = Math.max(
-        Math.ceil(last.getBoundingClientRect().bottom + window.scrollY),
-        document.documentElement.scrollHeight,
-        document.body.scrollHeight
-      ) + 200;
-      const w = 414;  // mobile width (change to 1280 for desktop PDF)
-      const s = document.createElement('style');
-      s.textContent = `@page { size: ${w}px ${h}px; margin: 0; } html, body { margin: 0 !important; }`;
-      document.head.appendChild(s);
-    });
-  });
-</script>
+    <div class="boxes">
+      <div class="box"><h3>{{BOX_1_H}}</h3><ul><li>{{BOX_1_LI_1}}</li><li>{{BOX_1_LI_2}}</li><li>{{BOX_1_LI_3}}</li><li>{{BOX_1_LI_4}}</li></ul></div>
+      <div class="box"><h3>{{BOX_2_H}}</h3><ul><li>{{BOX_2_LI_1}}</li><li>{{BOX_2_LI_2}}</li><li>{{BOX_2_LI_3}}</li><li>{{BOX_2_LI_4}}</li></ul></div>
+      <div class="box"><h3>{{BOX_3_H}}</h3><ul><li>{{BOX_3_LI_1}}</li><li>{{BOX_3_LI_2}}</li><li>{{BOX_3_LI_3}}</li><li>{{BOX_3_LI_4}}</li></ul></div>
+      <div class="box"><h3>{{BOX_4_H}}</h3><ul><li>{{BOX_4_LI_1}}</li><li>{{BOX_4_LI_2}}</li><li>{{BOX_4_LI_3}}</li><li>{{BOX_4_LI_4}}</li></ul></div>
+    </div>
+
+    <!-- BLOCK: numbered conversation/steps. Repeat .crow as needed. -->
+    <div class="subhead">{{STEPS_SUBHEAD}}</div>
+    <div class="conv">
+      <div class="crow"><div class="no">1</div><div class="k">{{STEP_1_K}}</div><div class="t">{{STEP_1_T}}</div></div>
+      <div class="crow"><div class="no">2</div><div class="k">{{STEP_2_K}}</div><div class="t">{{STEP_2_T}}</div></div>
+      <div class="crow"><div class="no">3</div><div class="k">{{STEP_3_K}}</div><div class="t">{{STEP_3_T}}</div></div>
+      <div class="crow"><div class="no">4</div><div class="k">{{STEP_4_K}}</div><div class="t">{{STEP_4_T}}</div></div>
+    </div>
+
+    <div class="banner"><h3><span class="ic">★</span>{{BANNER_TITLE}}</h3><p>{{BANNER_BODY}}</p></div>
+  </div>
+  <div class="foot"><span>{{FOOT_LABEL}}</span><span class="pg">{{PAGE_NO}}</span></div>
+</section>
+
+<!-- ============================ PAGE — METHODOLOGY ============================ -->
+<section class="page">
+  <div class="body">
+    <div class="eyebrow"><div class="tag">{{SECTION_TAG}}</div><div class="note">{{SECTION_NOTE}}</div></div>
+    <h1 class="ptitle">{{PAGE_TITLE}}</h1>
+    <div class="rule"></div>
+
+    <div class="method">
+      <div class="mcol">
+        <h3>{{METHOD_L_TITLE}}</h3>
+        <ul><li>{{METHOD_L_1}}</li><li>{{METHOD_L_2}}</li><li>{{METHOD_L_3}}</li><li>{{METHOD_L_4}}</li></ul>
+      </div>
+      <div class="mcol">
+        <h3>{{METHOD_R_TITLE}}</h3>
+        <!-- add class="ex" to a <li> to render an ✕ (excluded) bullet -->
+        <ul><li>{{METHOD_R_1}}</li><li class="ex">{{METHOD_R_2}}</li><li>{{METHOD_R_3}}</li><li>{{METHOD_R_4}}</li></ul>
+      </div>
+    </div>
+
+    <!-- BLOCK: sources (2-col). Repeat .src-row as needed. -->
+    <div class="subhead">{{SOURCES_SUBHEAD}}</div>
+    <div class="sources">
+      <div class="src-row"><div class="n">1</div><div class="x"><b>{{SRC_1_B}}</b> {{SRC_1_T}}</div></div>
+      <div class="src-row"><div class="n">2</div><div class="x"><b>{{SRC_2_B}}</b> {{SRC_2_T}}</div></div>
+      <div class="src-row"><div class="n">3</div><div class="x"><b>{{SRC_3_B}}</b> {{SRC_3_T}}</div></div>
+      <div class="src-row"><div class="n">4</div><div class="x"><b>{{SRC_4_B}}</b> {{SRC_4_T}}</div></div>
+      <div class="src-row"><div class="n">5</div><div class="x"><b>{{SRC_5_B}}</b> {{SRC_5_T}}</div></div>
+      <div class="src-row"><div class="n">6</div><div class="x"><b>{{SRC_6_B}}</b> {{SRC_6_T}}</div></div>
+    </div>
+
+    <div class="disc"><strong>Disclaimer.</strong> {{DISCLAIMER_TEXT}}</div>
+  </div>
+  <div class="foot"><span>{{FOOT_LABEL}}</span><span class="pg">{{PAGE_NO}}</span></div>
+</section>
+
 </body></html>
